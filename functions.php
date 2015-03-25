@@ -57,6 +57,13 @@ function gs_theme_setup() {
 		'footer'
 	) );
 
+	//* Add support for custom header
+	add_theme_support( 'custom-header', array(
+		'width'			=> 470,
+		'height'		=> 100,
+		'header-selector'	=> '.site-header .title-area',
+		'header-text'		=> false
+	) );
 	/**
 	 * 07 Footer Widgets
 	 * Add support for 3-column footer widgets

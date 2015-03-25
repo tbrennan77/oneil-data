@@ -474,9 +474,10 @@ h6,
 .header-image .title-area {
   display: block;
   float: left;
-  min-height: 120px;
+  min-height: 100px;
   overflow: hidden;
-  width: 50%;
+  width: 470px;
+  background: url(images/oneil-data-logo-new.png) no-repeat;
 }
 
 .header-image .site-description {
