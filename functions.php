@@ -177,3 +177,45 @@ function gs_do_after_entry() {
         );
  }
  }
+
+ 
+ // Custom Login Logo
+ function my_login_logo() { ?>
+
+	    <style type="text/css">
+		body {background: url('http://localhost:8080/oneildata/wp-content/themes/oneil-child-theme/images/login-bg.png') no-repeat top center fixed;}
+		body.login div#login {width: 500px;}
+        body.login div#login h1 a {
+            background-image: url('http://www.oneildata.com/wp-content/themes/oneil/css/assets/logo.png');
+            padding-bottom: 30px;
+			background-size: 201px;
+			width: 201px;
+			height: 40px;
+        }
+		#login {padding: 80px 0 0;}
+		.login form {background: transparent; -webkit-box-shadow: none; box-shadow: none;}
+		.login label {font-size: 18px; color: #fff;}
+		.login form .input {
+			background: transparent;
+			padding: 10px;
+			border: 3px solid #fff;
+			border-radius: 10px;
+			color: #fff;
+			font-size: 28px;
+		}
+		.login #backtoblog a, .login #nav a {
+			color: #fff;
+			font-size: 15px;
+		}
+		.login #nav {
+			margin: 0;
+			width: 200px;
+			float: right;
+		}
+		.login #backtoblog {
+			margin: 0;
+			float: left;
+		}	
+    </style>
+<?php }
+add_action( 'login_enqueue_scripts', 'my_login_logo' );
