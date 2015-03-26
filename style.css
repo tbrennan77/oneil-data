@@ -45,11 +45,21 @@
     13 Widgets/Plugins
         eNews
         Gravity Forms
+		Theme Specific Widgets
+			- Header Right (search box)
 */
 /*
 01 Import Fonts
 ---------------------------------------------------------------------------------------------------- */
-@import url(//fonts.googleapis.com/css?family=Arimo|Varela);
+/* @import url(//fonts.googleapis.com/css?family=Arimo|Varela); */
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700);
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('font/fontawesome-webfont.eot?v=4.3.0');
+  src: url('font/fontawesome-webfont.eot?#iefix&v=4.3.0') format('embedded-opentype'), url('font/fontawesome-webfont.woff2?v=4.3.0') format('woff2'), url('font/fontawesome-webfont.woff?v=4.3.0') format('woff'), url('font/fontawesome-webfont.ttf?v=4.3.0') format('truetype'), url('font/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
 /*
 02 Base Styles
@@ -95,7 +105,7 @@ html {
 body {
   background-color: white;
   font-size: 16px;
-  font-size: 1.6rem;
+  /* font-size: 1.6rem; */
   line-height: 1.8;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333333;
@@ -157,6 +167,7 @@ a img {
 /* Wraps */
 .site-container {
   width: 100%;
+  background: #fff url(images/login-bg.png) no-repeat center 123px;
 }
 
 .wrap {
@@ -244,7 +255,7 @@ a img {
 .sidebar-content-sidebar .content,
 .sidebar-sidebar-content .content,
 .site-header .widget-area {
-  width: 65.27778%;
+  width: 55.27778%;
   /* 752px / 1152px */
 }
 
@@ -435,8 +446,9 @@ h6,
 .site-header {
   min-height: 120px;
   overflow: hidden;
-  padding-bottom: 32px;
-  padding-bottom: 3.2rem;
+  padding-bottom: 10px;
+  padding-top: 14px;
+  border-bottom: 4px solid #b6bbbf;
 }
 
 .site-title {
@@ -486,9 +498,34 @@ h6,
 
 .site-header .search-form {
   float: right;
-  margin-top: 56px;
-  margin-top: 5.6rem;
-  width: 100%;
+  margin-top: 20px;
+  /*margin-top: 5.6rem;
+  width: 100%;*/
+}
+.site-header .search-form input {
+  background: #e3e9ee url(images/search-icon.png) no-repeat 15px 50%;
+  border-radius: 5px;
+  padding: 18px 10px;
+  color: #f26522;
+  text-transform: uppercase;
+  width: 200px;
+  font-size: 13px;
+  padding-left: 36px;
+  font-family: "Ubuntu","Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #f26522;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #f26522;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #f26522;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+   color:    #f26522;
 }
 
 /*
@@ -497,10 +534,8 @@ h6,
 .genesis-nav-menu {
   clear: both;
   color: white;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  letter-spacing: 1px;
-  letter-spacing: 0.1rem;
-  line-height: 1.5;
+  font-family: "Ubuntu","Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
   width: 100%;
 }
 .genesis-nav-menu .menu-item {
@@ -509,10 +544,10 @@ h6,
 }
 .genesis-nav-menu a {
   border: none;
-  color: white;
+  color: #0087bf;
   display: block;
-  padding: 28px 24px;
-  padding: 2.8rem 2.4rem;
+  padding: 18px 24px;
+  padding: 1.8rem 1.4rem;
   position: relative;
 }
 .genesis-nav-menu a:hover {
@@ -594,7 +629,18 @@ h6,
 /* Primary Navigation
 --------------------------------------------- */
 .nav-primary {
-  background-color: #3b3d42;
+  background-color: transparent;
+}
+
+.nav-primary .wrap {
+  background-color: #e3e9ee;
+  text-align: center;
+  	-webkit-border-bottom-right-radius: 4px;
+	-webkit-border-bottom-left-radius: 4px;
+	-moz-border-radius-bottomright: 4px;
+	-moz-border-radius-bottomleft: 4px;
+	border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px;
 }
 
 .nav-primary a:hover,
@@ -1212,3 +1258,23 @@ div.gform_wrapper form li {
   margin: 16px 0 0;
   margin: 1.6rem 0 0;
 }
+
+
+
+
+/* Header Right (Search box) */
+.header-widget-area {
+	min-height: 100px;
+	text-align: right;
+}
+
+#text-2 div.widget-wrap {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  vertical-align: middle
+  }
+
+  

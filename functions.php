@@ -143,6 +143,11 @@ function gs_register_sidebars() {
 			'name'			=> __( 'After Post', CHILD_DOMAIN ),
 			'description'	=> __( 'This will show up after every post.', CHILD_DOMAIN ),
 		),
+		array(
+			'id'              		=> 'header-right',
+			'name'         	 	=> __( 'Header Right', CHILD_DOMAIN ),
+			'description'  	=> __( 'Header search area', CHILD_DOMAIN ),
+		),
 	);
 	
 	foreach ( $sidebars as $sidebar )
@@ -226,3 +231,21 @@ function gs_do_after_entry() {
     </style>
 <?php }
 add_action( 'login_enqueue_scripts', 'my_login_logo' );
+
+
+/**
+* Add Widget area to right header
+*/
+function right_header_widget() {
+	if (is_active_sidebar('header-right') ) {
+		genesis_widget_area('header-right', array(
+			'before' => '<div class="header-right">',
+			'after'  => '</div>',
+		) );
+	}
+}
+
+add_filter( 'genesis_search_text', 'sp_search_text' );
+function sp_search_text( $text ) {
+	return esc_attr( 'Search' );
+}
