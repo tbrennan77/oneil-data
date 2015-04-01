@@ -119,18 +119,18 @@ function gs_register_sidebars() {
 		),
 		array(
 			'id'			=> 'home-middle-01',
-			'name'			=> __( 'Home Left Middle', CHILD_DOMAIN ),
-			'description'	=> __( 'This is the homepage left section.', CHILD_DOMAIN ),
+			'name'			=> __( 'Home Data and Print', CHILD_DOMAIN ),
+			'description'	=> __( 'This is where the data and print solutions goes.', CHILD_DOMAIN ),
 		),
 		array(
 			'id'			=> 'home-middle-02',
-			'name'			=> __( 'Home Middle Middle', CHILD_DOMAIN ),
-			'description'	=> __( 'This is the homepage middle section.', CHILD_DOMAIN ),
+			'name'			=> __( 'Home Recent News', CHILD_DOMAIN ),
+			'description'	=> __( 'This is the recent news and featured news item.', CHILD_DOMAIN ),
 		),
 		array(
 			'id'			=> 'home-middle-03',
-			'name'			=> __( 'Home Right Middle', CHILD_DOMAIN ),
-			'description'	=> __( 'This is the homepage right section.', CHILD_DOMAIN ),
+			'name'			=> __( 'Home OneSuite', CHILD_DOMAIN ),
+			'description'	=> __( 'This is the OneSuite section.', CHILD_DOMAIN ),
 		),
 		array(
 			'id'			=> 'home-bottom',

@@ -1,9 +1,9 @@
 
 /*
-    Theme Name: Oneil Data Custom Theme
-    Description: This is a custom Genesis child theme based on the Genesis Sandbox theme. 
-    Author: Jonathan Perez and Travis Smith (wpsmith.net)
-    Author URI: http://www.surefirewebservices.com/
+    Theme Name: O'Neil Data Custom Theme
+    Description: This is a custom Genesis child theme based on the Genesis Sandbox theme by Jonathan Perez and Travis Smith (wpsmith.net) of http://www.surefirewebservices.com/
+    Author: Tim Brennan	
+    Author URI: http://www.boondockwalker.com
  
     Version: 1.0
  
@@ -51,7 +51,6 @@
 /*
 01 Import Fonts
 ---------------------------------------------------------------------------------------------------- */
-/* @import url(//fonts.googleapis.com/css?family=Arimo|Varela); */
 @import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700);
 @font-face {
   font-family: 'FontAwesome';
@@ -1365,4 +1364,7 @@ div.gform_wrapper form li {
   vertical-align: middle; */
   }
 
-  
+/* Home Widgets */
+#home-middle-01 {
+  text-align: center;
+}	

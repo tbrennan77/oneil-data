@@ -1,4 +1,4 @@
-<?php
+	<?php
 
 /**
  * Home Page.
@@ -13,6 +13,9 @@
  */
 
 add_action( 'get_header', 'gs_home_helper' );
+remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_open', 5 );
+remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_close', 15 );
+
 /**
  * Add widget support for homepage. If no widgets active, display the default loop.
  *
@@ -48,7 +51,7 @@ function gs_home_widgets() {
         genesis_widget_area( 
                 'home-middle-01', 
                 array(
-                        'before' => '<aside id="home-middle-01" class="first one-third"><div class="home-widget widget-area">', 
+                        'before' => '<aside id="home-middle-01"><div class="home-widget widget-area">', 
                         'after' => '</div></aside><!-- end #home-left -->',
                 ) 
         );
