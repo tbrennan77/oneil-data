@@ -309,9 +309,9 @@ echo '<div id="footer-widgets" class="footer-widgets gs-footer-widgets-3">';
 				);
 			wp_nav_menu( $args );
     echo '</div>';
-    echo '<div class="social-icons">';
+    echo '<div class="wrap">';
 			genesis_widget_area('footer-social', array(
-			'before' => '<div class="footer-widgets-3 widget-area first one-third">',
+			'before' => '<div class="social-icons">',
 			'after' => '</div>',
 		) );
 	echo '</div>';
