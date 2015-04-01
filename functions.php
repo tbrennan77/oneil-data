@@ -54,7 +54,8 @@ function gs_theme_setup() {
 		'subnav',
 		'inner',
 		'footer-widgets',
-		'footer'
+		'footer',
+		'menu-footer'
 	) );
 
 	//* Add support for custom header
@@ -69,7 +70,7 @@ function gs_theme_setup() {
 	 * Add support for 3-column footer widgets
 	 * Change 3 for support of up to 6 footer widgets (automatically styled for layout)
 	 */
-	add_theme_support( 'genesis-footer-widgets', 3 );
+	// add_theme_support( 'genesis-footer-widgets', 3 );
 
 	/**
 	 * 08 Genesis Menus
@@ -103,6 +104,9 @@ function gs_theme_setup() {
 	// Register Sidebars
 	gs_register_sidebars();
 	
+	// Custom Actions
+
+
 } // End of Set Up Function
 
 // Register Sidebars
@@ -144,9 +148,29 @@ function gs_register_sidebars() {
 			'description'	=> __( 'This will show up after every post.', CHILD_DOMAIN ),
 		),
 		array(
-			'id'              		=> 'header-right',
-			'name'         	 	=> __( 'Header Right', CHILD_DOMAIN ),
+			'id'            => 'header-right',
+			'name'         	=> __( 'Header Right', CHILD_DOMAIN ),
 			'description'  	=> __( 'Header search area', CHILD_DOMAIN ),
+		),
+		array(
+			'id' 			=> 'footer-one',
+			'name' 			=> __( 'Footer Contact', CHILD_DOMAIN ),
+			'description' 	=> __( 'This is where you enter your logo and contact info.', CHILD_DOMAIN ),
+		),
+		array(
+			'id' 			=> 'footer-two',
+			'name' 			=> __( 'Footer Links', CHILD_DOMAIN ),
+			'description' 	=> __( 'This is where you can put links or additional content.', CHILD_DOMAIN ),
+		),
+		array(
+			'id' 			=> 'footer-three',
+			'name' 			=> __( 'Footer Content', CHILD_DOMAIN ),
+			'description' 	=> __( 'This is where you can put links or additional content.', CHILD_DOMAIN ),
+		),
+		array(
+			'id' 			=> 'footer-social',
+			'name' 			=> __( 'Footer Social', CHILD_DOMAIN ),
+			'description' 	=> __( 'This is where you can put social icons.', CHILD_DOMAIN ),
 		),
 	);
 	
@@ -248,4 +272,64 @@ function right_header_widget() {
 add_filter( 'genesis_search_text', 'sp_search_text' );
 function sp_search_text( $text ) {
 	return esc_attr( 'Search' );
+}
+
+
+remove_action('genesis_footer', 'genesis_do_footer' );
+add_action('genesis_footer', 'sp_custom_footer' );
+
+function sp_custom_footer() {
+
+echo '<div id="footer-widgets" class="footer-widgets gs-footer-widgets-3">';
+  echo '<div class="wrap">';
+
+		genesis_widget_area('footer-one', array(
+			'before' => '<div class="footer-widgets-1 widget-area first one-third">',
+			'after' => '</div>',
+		) );
+  
+		genesis_widget_area('footer-two', array(
+			'before' => '<div class="footer-widgets-2 widget-area first one-third">',
+			'after' => '</div>',
+		) );
+
+		genesis_widget_area('footer-three', array(
+			'before' => '<div class="footer-widgets-3 widget-area first one-third">',
+			'after' => '</div>',
+		) );
+
+  echo '</div>';
+  echo '<div class="nav-footer">';
+			$args = array(
+					'theme_location'  => 'footer',
+					'container'       => 'nav',
+					'container_class' => 'wrap',
+					'menu_class'      => 'menu genesis-nav-menu menu-footer',
+					'depth'           => 1,
+				);
+			wp_nav_menu( $args );
+    echo '</div>';
+    echo '<div class="social-icons">';
+			genesis_widget_area('footer-social', array(
+			'before' => '<div class="footer-widgets-3 widget-area first one-third">',
+			'after' => '</div>',
+		) );
+	echo '</div>';
+	
+echo '</div>';
+
+
+	
+}
+
+// Register and Hook Footer Navigation Menu
+// add_action('genesis_before_footer', 'sample_footer_menu', 10);
+	function sample_footer_menu() {
+
+	register_nav_menu( 'footer', 'Footer Navigation Menu' );
+	
+	genesis_nav_menu( array(
+		'theme_location' => 'footer',
+		'menu_class'     => 'menu genesis-nav-menu menu-footer',
+	) );
 }
