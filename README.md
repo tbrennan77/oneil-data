@@ -1,6 +1,6 @@
 # README #
 
-This README details the steps necessary to get this theme up and running..
+This README details the steps necessary to get this theme up and running.
 
 ### What is this repository for? ###
 
