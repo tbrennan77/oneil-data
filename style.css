@@ -1436,7 +1436,19 @@ div.gform_wrapper form li {
 
 .site-inner-3 {
  background-color: #e6ebef;
+  font-family: "Ubuntu","Helvetica Neue", Helvetica, Arial, sans-serif;
  }
  .site-inner-3  .wrap{
  text-align: center;
+}
+
+.site-inner-3 span {
+  color: #0087bf;
+}
+
+.site-inner-3 p {
+  width: 60%;
+  margin: 0 auto;
+  padding: 0 0 20px 0;
+  font-size: 18px;
 }
