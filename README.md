@@ -9,8 +9,8 @@ This README details the steps necessary to get this theme up and running.
 
 ### How do I get set up? ###
 
-* Summary of set up
-* Configuration
+* Summary of set up - Install the latest version of WordPress on your server or local machine (https://wordpress.org/download/)
+* Configuration - Install
 * Dependencies
 * Database configuration
 * How to run tests
