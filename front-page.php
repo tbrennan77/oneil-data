@@ -24,9 +24,10 @@ function gs_home_helper() {
 
         if ( is_active_sidebar( 'home-top' ) || is_active_sidebar( 'home-middle-01' ) || is_active_sidebar( 'home-middle-02' ) || is_active_sidebar( 'home-middle-03' ) || is_active_sidebar( 'home-bottom' ) ) {
 
-                remove_action( 'genesis_loop', 'genesis_do_loop' );
-                add_action( 'genesis_loop', 'gs_home_widgets' );
-                
+                remove_action('genesis_loop', 'genesis_do_loop' );
+                add_action('genesis_loop', 'gs_home_widgets' );
+                add_action('genesis_before_footer', 'gs_home_widgets2');
+				
                 /** Force Full Width */
                 add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
                 add_filter( 'genesis_site_layout', '__genesis_return_full_width_content' );
@@ -56,21 +57,6 @@ function gs_home_widgets() {
                 ) 
         );
 
-        genesis_widget_area( 
-                'home-middle-02', 
-                array(
-                        'before' => '<aside id="home-middle-01" class="one-third"><div class="home-widget widget-area">', 
-                        'after' => '</div></aside><!-- end #home-middle -->',
-                ) 
-        );
-
-        genesis_widget_area( 
-                'home-middle-03', 
-                array(
-                        'before' => '<aside id="home-right" class="one-third"><div class="home-widget widget-area">', 
-                        'after' => '</div></aside><!-- end #home-right -->',
-                ) 
-        );
         echo '</div>';
         
 
@@ -81,6 +67,24 @@ function gs_home_widgets() {
                         'after' => '</div></aside><!-- end #home-bottom -->',
                 ) 
         );                              
+}
+
+function gs_home_widgets2() {
+	    genesis_widget_area( 
+                'home-middle-02', 
+                array(
+                        'before' => '<div id="home-middle-02" class="site-inner-2"><div class="wrap"><div class="home-widget widget-area">', 
+                        'after' => '</div></div></div><!-- end #home-middle -->',
+                ) 
+        );
+
+        genesis_widget_area( 
+                'home-middle-03', 
+                array(
+                        'before' => '<div id="home-middle-03" class="site-inner-3"><div class="wrap"><div class="home-widget widget-area">', 
+                        'after' => '</div></div></div><!-- end #home-right -->',
+                ) 
+        );
 }
 
 genesis();
