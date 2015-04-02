@@ -1422,7 +1422,6 @@ div.gform_wrapper form li {
 }
 
 .site-inner-2 ul {
-  list-style: none;
 }
 .site-inner-2 ul li { 
     padding-left: 1em; 
@@ -1451,4 +1450,43 @@ div.gform_wrapper form li {
   margin: 0 auto;
   padding: 0 0 20px 0;
   font-size: 18px;
+}
+
+.more-link {
+  display: block!important;
+  text-transform: uppercase!important;
+  color: #d16431!important;
+  /* font-size: .9em!important; */
+  line-height: 1.5!important;
+  }
+  
+  
+ /* Mega Menu */
+ #mega-menu-sub-ul-industry {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  width: 250px!important;
+}
+ul#mega-menu-sub-ul-industry li {
+ padding-left: 10px!important;
+ margin-left: 10px!important;
+}
+ul#mega-menu-sub-ul-industry li::before {
+    content: "• "!important;
+    color: #fff!important;
+}
+ .mega-mega-menu-careers .mega-sub-menu {
+   background: #4e5e6d url(images/we-are-oneil.png) no-repeat!important;
+}
+ .mega-mega-menu-documents .mega-sub-menu {
+   background: #4e5e6d url(images/mega-bg-2.png) no-repeat!important;
+}
+ul#mega-menu-sub-ul-careers li span {
+  display: block;
+  font-size: .9em;
+  color: #b6bbbf;
+}
+ul#mega-menu-sub-ul-careers {
+  border-right: 1px solid #b6bbbf;
 }
