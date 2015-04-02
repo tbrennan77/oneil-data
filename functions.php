@@ -41,11 +41,10 @@ function gs_theme_setup() {
 	add_image_size( 'featured-image', 225, 160, TRUE );
 	
 	// Enable Custom Background
-	//add_theme_support( 'custom-background' );
+	add_theme_support( 'custom-background' );
 
 	// Enable Custom Header
-	//add_theme_support('genesis-custom-header');
-
+	add_theme_support('genesis-custom-header');
 
 	// Add support for structural wraps
 	add_theme_support( 'genesis-structural-wraps', array(
@@ -105,7 +104,8 @@ function gs_theme_setup() {
 	gs_register_sidebars();
 	
 	// Custom Actions
-
+	unregister_sidebar('sidebar');
+	unregister_sidebar('sidebar-alt');
 
 } // End of Set Up Function
 
@@ -114,25 +114,25 @@ function gs_register_sidebars() {
 	$sidebars = array(
 		array(
 			'id'			=> 'home-top',
-			'name'			=> __( 'Home Top', CHILD_DOMAIN ),
-			'description'	=> __( 'This is the top homepage section.', CHILD_DOMAIN ),
+			'name'			=> __( 'Home: Slider', CHILD_DOMAIN ),
+			'description'	=> __( 'This is where the slider widget goes.', CHILD_DOMAIN ),
 		),
 		array(
 			'id'			=> 'home-middle-01',
-			'name'			=> __( 'Home Data and Print', CHILD_DOMAIN ),
-			'description'	=> __( 'This is where the data and print solutions goes.', CHILD_DOMAIN ),
+			'name'			=> __( 'Home: Featured Solutions', CHILD_DOMAIN ),
+			'description'	=> __( 'This is where the two featured solutions posts go.', CHILD_DOMAIN ),
 		),
 		array(
 			'id'			=> 'home-middle-02',
-			'name'			=> __( 'Home Recent News', CHILD_DOMAIN ),
-			'description'	=> __( 'This is the recent news and featured news item.', CHILD_DOMAIN ),
+			'name'			=> __( 'Home: Recent News and Success', CHILD_DOMAIN ),
+			'description'	=> __( 'This is the recent news and featured news item go.', CHILD_DOMAIN ),
 		),
 		array(
 			'id'			=> 'home-middle-03',
-			'name'			=> __( 'Home OneSuite', CHILD_DOMAIN ),
-			'description'	=> __( 'This is the OneSuite section.', CHILD_DOMAIN ),
+			'name'			=> __( 'Home: OneSuite', CHILD_DOMAIN ),
+			'description'	=> __( 'This is the OneSuite section. This is where the text widgets go.', CHILD_DOMAIN ),
 		),
-		array(
+		/*array(
 			'id'			=> 'home-bottom',
 			'name'			=> __( 'Home Bottom', CHILD_DOMAIN ),
 			'description'	=> __( 'This is the homepage right section.', CHILD_DOMAIN ),
@@ -141,36 +141,36 @@ function gs_register_sidebars() {
 			'id'			=> 'portfolio',
 			'name'			=> __( 'Portfolio', CHILD_DOMAIN ),
 			'description'	=> __( 'Use featured posts to showcase your portfolio.', CHILD_DOMAIN ),
-		),
-		array(
-			'id'			=> 'after-post',
-			'name'			=> __( 'After Post', CHILD_DOMAIN ),
-			'description'	=> __( 'This will show up after every post.', CHILD_DOMAIN ),
-		),
+		),*/
 		array(
 			'id'            => 'header-right',
-			'name'         	=> __( 'Header Right', CHILD_DOMAIN ),
-			'description'  	=> __( 'Header search area', CHILD_DOMAIN ),
+			'name'         	=> __( 'Header Search', CHILD_DOMAIN ),
+			'description'  	=> __( 'This is where the search widget for the header goes.', CHILD_DOMAIN ),
 		),
 		array(
 			'id' 			=> 'footer-one',
-			'name' 			=> __( 'Footer Contact', CHILD_DOMAIN ),
+			'name' 			=> __( 'Footer: Contact Info', CHILD_DOMAIN ),
 			'description' 	=> __( 'This is where you enter your logo and contact info.', CHILD_DOMAIN ),
 		),
 		array(
 			'id' 			=> 'footer-two',
-			'name' 			=> __( 'Footer Links', CHILD_DOMAIN ),
+			'name' 			=> __( 'Footer: Links', CHILD_DOMAIN ),
 			'description' 	=> __( 'This is where you can put links or additional content.', CHILD_DOMAIN ),
 		),
-		array(
+		/*array(
 			'id' 			=> 'footer-three',
 			'name' 			=> __( 'Footer Content', CHILD_DOMAIN ),
 			'description' 	=> __( 'This is where you can put links or additional content.', CHILD_DOMAIN ),
-		),
+		),*/
 		array(
 			'id' 			=> 'footer-social',
-			'name' 			=> __( 'Footer Social', CHILD_DOMAIN ),
+			'name' 			=> __( 'Footer: Social', CHILD_DOMAIN ),
 			'description' 	=> __( 'This is where you can put social icons.', CHILD_DOMAIN ),
+		),
+		array(
+			'id'			=> 'after-post',
+			'name'			=> __( 'After Post', CHILD_DOMAIN ),
+			'description'	=> __( 'This content will display after every post.', CHILD_DOMAIN ),
 		),
 	);
 	
