@@ -1372,8 +1372,44 @@ div.gform_wrapper form li {
 /* Home Widgets */
 #home-middle-01 {
   text-align: center;
+  padding-left: 70px;
+}
+#home-middle-01 section article {
+  float: left;
+  width: 49%;
+  margin-bottom: 0;
+  padding: 10px 20px;
+  border-radius: 4px;
+  background-color: rgb( 255, 255, 255 );
+  box-shadow: 3.214px 3.83px 0px 0px rgba(20,19,20,0.21);
+  width: 470px;
+  height: 180px;
+  z-index: 127;
 }	
-
+#home-middle-01 section article header a {
+ font-family: "Ubuntu","Helvetica Neue", Helvetica, Arial, sans-serif;
+ font-size: 18px;
+ color: #f26522;
+}
+#home-middle-01 section article header {
+ text-align: left;
+}
+#home-middle-01 section article .entry-content p {
+ font-family: "Ubuntu","Helvetica Neue", Helvetica, Arial, sans-serif;
+ font-size: 16px;
+ font-weight: 300;
+ line-height: 20px;
+ text-align: justify;
+}
+#home-middle-01 section article .entry-content .more-link {display: none!important;}
+#home-middle-01 section article img {
+ height: 120px;
+ width: 120px;
+ margin: 20px 20px 0 10px;
+}
+#home-middle-01 section article:first-child {
+  margin-right: 40px;
+  }
 .site-inner-2 {
   font-family: "Ubuntu","Helvetica Neue", Helvetica, Arial, sans-serif;
   padding: 60px 0 20px 0;
