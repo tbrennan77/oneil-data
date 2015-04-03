@@ -15,6 +15,7 @@
 add_action( 'get_header', 'gs_home_helper' );
 remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_open', 5 );
 remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_close', 15 );
+remove_action('genesis_footer', 'genesis_do_footer');
 
 /**
  * Add widget support for homepage. If no widgets active, display the default loop.
