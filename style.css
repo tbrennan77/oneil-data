@@ -1014,17 +1014,12 @@ Site Footer
 ---------------------------------------------------------------------------------------------------- */
 .site-footer {
   clear: both;
-  margin: 8px 0;
-  margin: 0.8rem 0;
-  background: rgb(104,117,130); /* Old browsers */
-	background: url(images/footer-bg.png) repeat-x -moz-linear-gradient(top,  rgba(104,117,130,1) 0%, rgba(176,185,193,1) 100%); /* FF3.6+ */
-	background: url(images/footer-bg.png) repeat-x -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(104,117,130,.7)), color-stop(100%,rgba(176,185,193,.7))); /* Chrome,Safari4+ */
-	background: url(images/footer-bg.png) repeat-x -webkit-linear-gradient(top,  rgba(104,117,130,.7) 0%,rgba(176,185,193,.7) 100%); /* Chrome10+,Safari5.1+ */
-	background: url(images/footer-bg.png) repeat-x -o-linear-gradient(top,  rgba(104,117,130,.7) 0%,rgba(176,185,193,.7) 100%); /* Opera 11.10+ */
-	background: url(images/footer-bg.png) repeat-x -ms-linear-gradient(top,  rgba(104,117,130,.7) 0%,rgba(176,185,193,.7) 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  rgba(104,117,130,1) 0%,rgba(176,185,193,1) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#687582', endColorstr='#b0b9c1',GradientType=0 ); /* IE6-9 */
-
+  background-image: -moz-linear-gradient( -90deg, rgb(104,117,130) 0%, rgb(176,185,193) 100%);
+  background-image: -webkit-linear-gradient( -90deg, rgb(104,117,130) 0%, rgb(176,185,193) 100%);
+  background-image: -ms-linear-gradient( -90deg, rgb(104,117,130) 0%, rgb(176,185,193) 100%);
+  width: 100%;
+  height: 350px;
+  z-index: 2;
 }
 
 .site-footer .wrap {
@@ -1525,4 +1520,31 @@ ul#mega-menu-sub-ul-careers li span {
 }
 ul#mega-menu-sub-ul-careers {
   border-right: 1px solid #b6bbbf;
+}
+
+
+.one-suite-links {
+background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+    width: 100%;
+    min-height: 600px;
+    padding-left: 80px;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    margin-bottom: 80px;
+	margin-top: 20px;
+  }
+  
+.one-suite {
+  border-radius: 4px;
+  background: rgb( 241, 241, 241 ) url(images/bg-arrow.png) no-repeat 90% center;
+  box-shadow: 3.214px 3.83px 0px 0px rgba(20, 19, 20, 0.21);
+  width: 470px;
+  height: 120px;
+  float: left;
+  margin: 10px;
+  text-align: left;
+  padding-top: 18px;
+  padding-left: 30px;
+  
 }
