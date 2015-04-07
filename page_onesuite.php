@@ -1,9 +1,9 @@
 <?php
 
 /**
- * Template Name: Industry Page Template
+ * Template Name: ONEsuite Page Template
  *
- * This file adds the Industry template. This file assumes that nothing has been moved
+ * This file adds the ONEsuite template. This file assumes that nothing has been moved
  * from the Genesis default.
  *
  * @category   Genesis_Sandbox
@@ -37,7 +37,7 @@ function gs_add_landing_body_class( $classes ) {
 function custom_add_css_attr( $attributes ) {
  
  // add original plus extra CSS classes
- $attributes['class'] .= ' industry toggled-on';
+ $attributes['class'] .= ' onesuite toggled-on';
  
  // return the attributes
  return $attributes;
@@ -72,7 +72,7 @@ function set_background_image() {
  *
  */
 function custom_load_custom_style_sheet() {
-	wp_enqueue_style('industry-stylesheet', CHILD_URL . '/css/industry.css', array(), PARENT_THEME_VERSION );
+	wp_enqueue_style('onesuite-stylesheet', CHILD_URL . '/css/onesuite.css', array(), PARENT_THEME_VERSION );
 }
 
 /** Force Layout */

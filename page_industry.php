@@ -22,7 +22,8 @@ if ( ! defined( 'ABSPATH' ) ) exit( 'Cheatin&#8217; uh?' );
 add_filter('body_class', 'gs_add_landing_body_class' );
 add_filter('genesis_attr_entry-content', 'custom_add_css_attr' );
 add_action('wp_enqueue_scripts', 'custom_load_custom_style_sheet' );
-	
+
+
 /**
  * Add page specific body class
  *
@@ -75,8 +76,9 @@ function custom_load_custom_style_sheet() {
 	wp_enqueue_style('industry-stylesheet', CHILD_URL . '/css/industry.css', array(), PARENT_THEME_VERSION );
 }
 
+
 /** Force Layout */
-add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
-add_filter( 'genesis_site_layout', '__genesis_return_full_width_content' );
+add_filter('genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
+add_filter('genesis_site_layout', '__genesis_return_full_width_content' );
 
 genesis();

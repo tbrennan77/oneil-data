@@ -84,6 +84,8 @@ function gs_theme_setup() {
 		array(
 			'primary'   => __( 'Primary Navigation Menu', CHILD_DOMAIN ), 
 			'secondary' => __( 'Secondary Navigation Menu', CHILD_DOMAIN ),
+			'industry'  => __( 'Industry Navigation Menu', CHILD_DOMAIN ),
+			'onesuite'  => __( 'OneSuite Navigation Menu', CHILD_DOMAIN ),
 			'footer'    => __( 'Footer Navigation Menu', CHILD_DOMAIN ),
 			'mobile'    => __( 'Mobile Navigation Menu', CHILD_DOMAIN ),
 		)
@@ -115,10 +117,10 @@ function gs_theme_setup() {
 	add_action('login_enqueue_scripts', 'my_login_logo' );  // Custom Login Page
 	add_action('genesis_after_entry', 'gs_do_after_entry'); // Add Widget Area After Post
 	add_action('genesis_footer', 'sp_custom_footer' );		// Custom Footer Design
-	add_action( 'genesis_before_entry', 'reposition_entry_header' );	// Move the post title inside the content area
+	add_action('genesis_before_entry', 'reposition_entry_header' );	// Move the post title inside the content area
 	
-	add_filter( 'genesis_search_text', 'sp_search_text' );  // Custom Search box Text
-	add_filter( 'genesis_footer_output', 'custom_footer_copyright' ); // Remove copyright text
+	add_filter('genesis_search_text', 'sp_search_text' );  // Custom Search box Text
+	add_filter('genesis_footer_output', 'custom_footer_copyright' ); // Remove copyright text
 	
 } // End of Set Up Function
 
