@@ -44,26 +44,22 @@ function custom_add_css_attr( $attributes ) {
  
 }
 
-add_action('genesis_before_post_content', 'set_background_image');
-function set_background_image() {
-    // declare $post global if used outside of the loop
-    global $post;
+add_action('genesis_after_header', 'set_background_image');
 
-    // check to see if the theme supports Featured Images, and one is set
-    if (current_theme_supports( 'post-thumbnails' ) && has_post_thumbnail( $post->ID )) {
+function set_background_image() {
+    if ( is_singular( 'post' ) || ( is_singular( 'page' ) && has_post_thumbnail() ) ) {
             
-        // specify desired image size in place of 'full'
-        $page_bg_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
-        $page_bg_image_url = $page_bg_image[0]; // this returns just the URL of the image
+        //$image = array( 'src' => has_post_thumbnail() ? genesis_get_image( array( 'format' => 'url' ) ) : '' );
+		$image = genesis_get_image( array( 'format' => 'url' ));
 
     } else {
         // the fallback – our current active theme's default bg image
-        $page_bg_image_url = get_background_image();
+        $image = get_background_image();
     }
 
     // And below, spit out the <style> tag... ?>
     <style type="text/css" id="custom-background-css-override">
-        .site-container { background-image: url('<?php echo $page_bg_image_url; ?>') no-repeat center 124px !important; }
+        .site-container {background: #fff url('<?php echo $image; ?>') no-repeat center 124px!important; }
     </style>
 	<?php 
 }
