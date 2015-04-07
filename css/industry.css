@@ -9,10 +9,11 @@
   padding: 40px 20px 0 0;
   font-family: "Ubuntu","Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #4e5e6d;
+  min-height: 400px;
 }
 .industry-intro-copy a.pdf {
   font-family: "Ubuntu","Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #f26522;
+  color: #6f2075;
   text-transform: uppercase;
   font-size: .8em;
 }
@@ -29,19 +30,21 @@
  }
 .industry-intro-copy  h1{
   font-size: 36px;
-  color: #f26522;
+  color: #6f2075;
   font-family: "Stainless","Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .industry-intro-logo {
   text-align: center;
+  min-height: 400px;
+  padding-top: 20px;
 }
 
 /* Style the accordian menus */
 .industry .et_lb_module_content {
  border: 0px;
 }
-.industry .et_lb_column {
-
+.industry .et_lb_first {
+  /* min-height: 400px; */
 }
 .industry .et_lb_module .et_lb_toggle {
   margin: 0 0 6px 2%; 
@@ -51,7 +54,7 @@
   background-image: none;
 }
 .industry .et_lb_toggle_open .et_lb_toggle_title{
- color: #f26522;
+ color: #6f2075;
 }
 .industry .et_lb_toggle_title {
   font-family: "Ubuntu","Helvetica Neue", Helvetica, Arial, sans-serif;
