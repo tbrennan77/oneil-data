@@ -52,13 +52,10 @@
 01 Import Fonts
 ---------------------------------------------------------------------------------------------------- */
 @import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700);
-@font-face {
-  font-family: 'FontAwesome';
-  src: url('font/fontawesome-webfont.eot?v=4.3.0');
-  src: url('font/fontawesome-webfont.eot?#iefix&v=4.3.0') format('embedded-opentype'), url('font/fontawesome-webfont.woff2?v=4.3.0') format('woff2'), url('font/fontawesome-webfont.woff?v=4.3.0') format('woff'), url('font/fontawesome-webfont.ttf?v=4.3.0') format('truetype'), url('font/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
+@import url(//cloud.webtype.com/css/85d9dd53-dea5-46f4-bfa1-52fbbdf7c32c.css);
+@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);
+
+
 
 /*
 02 Base Styles
@@ -166,7 +163,7 @@ a img {
 /* Wraps */
 .site-container {
   width: 100%;
-  background: #fff url(images/login-bg.png) no-repeat center 123px;
+  background: #fff url(images/login-bg.png) no-repeat center 124px;
 }
 
 .wrap {
@@ -332,8 +329,8 @@ a img {
 
 /* Entry Content Structure */
 .content {
-  padding-bottom: 40px;
-  padding-bottom: 4rem;
+  padding-bottom: 100px;
+  padding-bottom: 10rem;
 }
 
 .entry,
@@ -377,6 +374,9 @@ h1,
 .site-title {
   font-size: 32px;
   font-size: 3.2rem;
+}
+.entry-title {
+	
 }
 
 /* Title Class for SEO / No Overuse of H Tags */
@@ -493,7 +493,7 @@ h6,
   min-height: 100px;
   overflow: hidden;
   width: 470px;
-  background: url(images/oneil-data-logo-new.png) no-repeat;
+  /* background: url(images/oneil-data-logo-new.png) no-repeat; */
 }
 
 .header-image .site-description {
@@ -649,7 +649,7 @@ h6,
 
 .nav-primary a:hover,
 .nav-primary .current-menu-item > a {
-  color: #fff;
+  color: #1d515b;
 }
 
 .nav-primary .sub-menu a {
@@ -666,15 +666,42 @@ h6,
 /* Secondary Navigation
 --------------------------------------------- */
 .nav-secondary a {
-  color: #000d11;
+  color: #4e5e6d;
+  font-family: "Ubuntu", Arial, serif; 
+  text-transform: none;
+  padding: 5px;
 }
-
+.nav-secondary ul li {
+  padding: 10px 10px;
+}
+.nav-secondary .current-menu-item a,
+.nav-secondary a:hover {
+  color: #fff;
+  background-color: #f26522;
+  
+  -webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+}
 .nav-secondary .sub-menu {
   border-top: 1px solid #eee;
 }
 .nav-secondary .sub-menu .sub-menu {
   margin-top: -55px;
 }
+.nav-secondary .wrap {
+  text-align: center;
+  background-image: -moz-linear-gradient( 90deg, rgb(241,241,241) 0%, rgb(255,255,255) 25%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(241,241,241) 0%, rgb(255,255,255) 25%);
+  background-image: -ms-linear-gradient( 90deg, rgb(241,241,241) 0%, rgb(255,255,255) 25%);
+-webkit-border-top-left-radius: 5px;
+-webkit-border-top-right-radius: 5px;
+-moz-border-radius-topleft: 5px;
+-moz-border-radius-topright: 5px;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;  
+}
+
 
 /* Mobile Menu */
 .genesis-nav-menu.menu-mobile {
@@ -911,14 +938,42 @@ h6,
 
 /* After Post */
 .after-post {
-  background: #f2f2f2;
-  border: 1px solid #d8d8d8;
-  padding: 10px;
-  padding: 1rem;
+  background: #f26522;
   margin-bottom: 50px;
   margin-bottom: 5rem;
+  color: #fff;
+  font-family: "Ubuntu", Arial, serif; 
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  width: 65%; 
+  margin: auto; 
+  min-height: 130px;  
 }
-
+.after-post .textwidget .left {
+  font-size: 16px;
+  line-height: 20px;
+  padding: 20px 0 10px 20px;
+  float: left;
+  width: 60%;
+}
+.after-post .textwidget .right {
+  text-transform: uppercase;
+  float: right;
+  background-image: -moz-linear-gradient( 90deg, rgb(17,63,72) 0%, rgb(29,81,91) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(17,63,72) 0%, rgb(29,81,91) 100%);
+  background-image: -ms-linear-gradient( 90deg, rgb(17,63,72) 0%, rgb(29,81,91) 100%);
+  opacity: 0.149;
+  width: 270px;
+  height: 130px;
+  z-index: 70;
+}
+.after-post .textwidget .right a {
+  color: #fff;
+  position: relative;
+  top: 40%;
+  left: 25%;
+}
 /* Blockquotes */
 blockquote {
   padding: 24px 64px;
@@ -1383,8 +1438,16 @@ div.gform_wrapper form li {
 }	
 #home-middle-01 section article header a {
  font-family: "Ubuntu","Helvetica Neue", Helvetica, Arial, sans-serif;
- font-size: 18px;
+ font-size: 20px;
  color: #f26522;
+ font-weight: normal;
+}
+#home-middle-01 section article header a:visited {
+ color: #f26522;
+}
+#home-middle-01 section article header h2 {
+ margin-bottom: 5px;
+ margin-top: 15px;
 }
 #home-middle-01 section article header {
  text-align: left;
@@ -1453,15 +1516,16 @@ div.gform_wrapper form li {
 }
 
 .site-inner-2 ul {
+  list-style-type: none;
 }
 .site-inner-2 ul li { 
-    padding-left: 1em; 
+    /* padding-left: 1em;  */
     text-indent: -.7em;
 }
 
 .site-inner-2 ul li:before {
     content: "• ";
-    color: #0087bf; /* or whatever color you prefer */
+    color: #0087bf;
 }
 
 .site-inner-3 {
@@ -1493,17 +1557,25 @@ div.gform_wrapper form li {
   
   
  /* Mega Menu */
- #mega-menu-sub-ul-industry {
+#mega-menu-sub-ul li {
+
+
+}
+ #mega-menu-sub-ul li a:before {
+    content: "• "!important;
+    color: #fff!important;
+ }
+#mega-menu-sub-ul-industry {
   columns: 2;
   -webkit-columns: 2;
   -moz-columns: 2;
-  width: 250px!important;
+  width: 320px!important;
 }
 ul#mega-menu-sub-ul-industry li {
  padding-left: 10px!important;
  margin-left: 10px!important;
 }
-ul#mega-menu-sub-ul-industry li::before {
+ul#mega-menu-sub-ul-industry li a:before {
     content: "• "!important;
     color: #fff!important;
 }

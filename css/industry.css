@@ -1,0 +1,79 @@
+.nav-primary { 
+  margin-bottom: 160px;
+ }
+.site-inner {
+  background: #fff url(../images/industry-bg.png) repeat-x center 400px;
+  padding-top: 20px;
+}
+.industry-intro-copy {
+  padding: 40px 20px 0 0;
+  font-family: "Ubuntu","Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #4e5e6d;
+}
+.industry-intro-copy a.pdf {
+  font-family: "Ubuntu","Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #f26522;
+  text-transform: uppercase;
+  font-size: .8em;
+}
+.industry-intro-copy a.pdf:before {
+  font-family: FontAwesome;
+  content: "\f1c1      ";
+}
+.industry-intro-copy a.pdf:after {
+  font-family: FontAwesome;
+  content: "                 \f0da";
+}
+.industry-intro-copy a i{
+  padding-right: 10px;
+ }
+.industry-intro-copy  h1{
+  font-size: 36px;
+  color: #f26522;
+  font-family: "Stainless","Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.industry-intro-logo {
+  text-align: center;
+}
+
+/* Style the accordian menus */
+.industry .et_lb_module_content {
+ border: 0px;
+}
+.industry .et_lb_column {
+
+}
+.industry .et_lb_module .et_lb_toggle {
+  margin: 0 0 6px 2%; 
+}
+.industry .et_lb_module_content_inner {
+  background-color: rgb( 255, 255, 255 );
+  background-image: none;
+}
+.industry .et_lb_toggle_open .et_lb_toggle_title{
+ color: #f26522;
+}
+.industry .et_lb_toggle_title {
+  font-family: "Ubuntu","Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #0087bf;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+}
+.industry .et_lb_toggle_title  span.et_toggle {
+  width: 20px;
+  height: 20px;
+  top: 0px;
+ }
+ .industry .et_lb_toggle_content {
+     font-family: "Ubuntu","Helvetica Neue", Helvetica, Arial, sans-serif;
+	 color: #000;
+	 line-height: 20px;
+ }
+.industry .et_lb_toggle_close h3.et_lb_toggle_title span.et_toggle {
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+}

@@ -11,10 +11,11 @@
  * @link       http://wpsmith.net/
  * @since      1.1.0
  */
+add_theme_support( 'genesis-menus', array( 'primary' => __( 'Primary Navigation Menu', 'genesis' ) ) );
 
-add_action( 'get_header', 'gs_home_helper' );
-remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_open', 5 );
-remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_close', 15 );
+add_action('get_header', 'gs_home_helper' );
+remove_action('genesis_entry_header', 'genesis_entry_header_markup_open', 5 );
+remove_action('genesis_entry_header', 'genesis_entry_header_markup_close', 15 );
 remove_action('genesis_footer', 'genesis_do_footer');
 
 /**

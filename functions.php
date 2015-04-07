@@ -35,10 +35,10 @@ function gs_theme_setup() {
 	 * @param integer $small Small width
 	 * @param integer $large Large width
 	 */
-	$content_width = apply_filters( 'content_width', 600, 430, 920 );
+	$content_width = apply_filters('content_width', 600, 430, 920 );
 	
 	//Custom Image Sizes
-	add_image_size( 'featured-image', 225, 160, TRUE );
+	add_image_size('featured-image', 225, 160, TRUE );
 	
 	// Enable Custom Background
 	add_theme_support( 'custom-background' );
@@ -46,8 +46,11 @@ function gs_theme_setup() {
 	// Enable Custom Header
 	add_theme_support('genesis-custom-header');
 
+	// Add support for after entry widget
+	add_theme_support('genesis-after-entry-widget-area' );
+
 	// Add support for structural wraps
-	add_theme_support( 'genesis-structural-wraps', array(
+	add_theme_support('genesis-structural-wraps', array(
 		'header',
 		'nav',
 		'subnav',
@@ -107,6 +110,16 @@ function gs_theme_setup() {
 	unregister_sidebar('sidebar');
 	unregister_sidebar('sidebar-alt');
 
+	remove_action('genesis_footer', 'genesis_do_footer' );	// Remove Default Footer
+	
+	add_action('login_enqueue_scripts', 'my_login_logo' );  // Custom Login Page
+	add_action('genesis_after_entry', 'gs_do_after_entry'); // Add Widget Area After Post
+	add_action('genesis_footer', 'sp_custom_footer' );		// Custom Footer Design
+	add_action( 'genesis_before_entry', 'reposition_entry_header' );	// Move the post title inside the content area
+	
+	add_filter( 'genesis_search_text', 'sp_search_text' );  // Custom Search box Text
+	add_filter( 'genesis_footer_output', 'custom_footer_copyright' ); // Remove copyright text
+	
 } // End of Set Up Function
 
 // Register Sidebars
@@ -169,8 +182,8 @@ function gs_register_sidebars() {
 		),
 		array(
 			'id'			=> 'after-post',
-			'name'			=> __( 'After Post', CHILD_DOMAIN ),
-			'description'	=> __( 'This content will display after every post.', CHILD_DOMAIN ),
+			'name'			=> __( 'Request a Quote', CHILD_DOMAIN ),
+			'description'	=> __( 'This content will display after every page content.', CHILD_DOMAIN ),
 		),
 	);
 	
@@ -200,10 +213,8 @@ function gs_mobile_navigation() {
 	gs_navigation( 'mobile', $mobile_menu_args );
 }
 
-// Add Widget Area After Post
-add_action('genesis_after_entry', 'gs_do_after_entry');
 function gs_do_after_entry() {
- 	if ( is_single() ) {
+ 	if (  is_singular( array( 'page' )) ) {
  	genesis_widget_area( 
                 'after-post', 
                 array(
@@ -214,9 +225,8 @@ function gs_do_after_entry() {
  }
  }
 
- 
- // Custom Login Logo
- function my_login_logo() { ?>
+// Custom Login Logo
+function my_login_logo() { ?>
 
 	    <style type="text/css">
 		body {background: url('http://localhost:8080/oneildata/wp-content/themes/oneil-child-theme/images/login-bg.png') no-repeat top center fixed;}
@@ -254,8 +264,6 @@ function gs_do_after_entry() {
 		}	
     </style>
 <?php }
-add_action( 'login_enqueue_scripts', 'my_login_logo' );
-
 
 /**
 * Add Widget area to right header
@@ -269,14 +277,10 @@ function right_header_widget() {
 	}
 }
 
-add_filter( 'genesis_search_text', 'sp_search_text' );
 function sp_search_text( $text ) {
 	return esc_attr( 'Search' );
 }
 
-
-remove_action('genesis_footer', 'genesis_do_footer' );
-add_action('genesis_footer', 'sp_custom_footer' );
 
 function sp_custom_footer() {
 
@@ -324,7 +328,7 @@ echo '</div>';
 
 // Register and Hook Footer Navigation Menu
 // add_action('genesis_before_footer', 'sample_footer_menu', 10);
-	function sample_footer_menu() {
+function sample_footer_menu() {
 
 	register_nav_menu( 'footer', 'Footer Navigation Menu' );
 	
@@ -332,4 +336,29 @@ echo '</div>';
 		'theme_location' => 'footer',
 		'menu_class'     => 'menu genesis-nav-menu menu-footer',
 	) );
+}
+
+//* Move Post Title and Post Info from inside Entry Header to Entry Content on Posts page
+function reposition_entry_header() {
+
+	if (!is_home() ) {
+
+		remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_open', 5 );
+		remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
+		remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
+		remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_close', 15 );
+
+		//add_action( 'genesis_entry_content', 'genesis_do_post_title', 9 );
+		//add_action( 'genesis_entry_content', 'genesis_post_info', 9 );
+
+	}
+
+}
+
+
+function custom_footer_copyright( $output ) {
+
+	$output = sprintf();
+	return $output;
+
 }
