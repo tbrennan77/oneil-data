@@ -33,6 +33,12 @@
   color: #6f2075;
   font-family: "Stainless","Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+.industry-intro-copy  h3 {
+  font-size: 26px;
+  color: #0087bf;
+  font-family: "Ubuntu","Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
 .industry-intro-logo {
   text-align: center;
   min-height: 400px;

@@ -1,83 +1,80 @@
 .nav-primary { 
   margin-bottom: 240px;
  }
-#menu-onesuite {
-  background: #f0f0f1 url(../images/onesuite-menu-bg.png) no-repeat left 0;
+#menu-standard {
+  background: #f0f0f1 url(../images/standard-menu-bg.png) no-repeat left 0;
  }
-.nav-secondary ul li:first-child {
-  margin-left: 20px;
-} 
 .site-inner {
-  background: #f0f0f1 url(../images/onesuite-bg.png) repeat-x;
+  background: #f0f0f1 url(../images/standard-bg.png) repeat-x;
   padding-top: 20px;
 }
-.onesuite-intro-copy {
+.standard-intro-copy {
   padding: 40px 20px 0 0;
   font-family: "Ubuntu","Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #4e5e6d;
   min-height: 400px;
 }
-.onesuite-intro-copy a.pdf {
+.standard-intro-copy a.pdf {
   font-family: "Ubuntu","Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #6f2075;
   text-transform: uppercase;
   font-size: .8em;
 }
-.onesuite-intro-copy a.pdf:before {
+.standard-intro-copy a.pdf:before {
   font-family: FontAwesome;
   content: "\f1c1      ";
 }
-.onesuite-intro-copy a.pdf:after {
+.standard-intro-copy a.pdf:after {
   font-family: FontAwesome;
   content: "                 \f0da";
 }
-.onesuite-intro-copy a i{
+.standard-intro-copy a i{
   padding-right: 10px;
  }
-.onesuite-intro-copy  h1{
+.standard-intro-copy  h1{
   font-size: 36px;
   color: #6f2075;
   font-family: "Stainless","Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-.onesuite-intro-copy  h3 {
+.standard-intro-copy  h3 {
   font-size: 26px;
   color: #0087bf;
   font-family: "Ubuntu","Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
 }
-.onesuite-intro-logo {
+.standard-intro-logo {
   text-align: center;
   min-height: 400px;
   padding-top: 20px;
 }
-.onesuite-callout {
+.standard-callout {
   font-size: 36px;
   color: #4e5e6d;
   font-family: "Stainless Light","Helvetica Neue", Helvetica, Arial, sans-serif;
   text-align: center;
   line-height: 44px;
-  padding: 0 20px;
+  padding: 0 120px;
   background-color: #fff;
-  margin-top: 90px;
-  height: 330px;
+  margin-top: 80px;
+  height: 350px;
 }
-.onesuite-callout p {
+.standard-callout p {
 position: relative;
   top: 50%;
   transform: translateY(-50%);
   }
-.onesuite-bottom  {
+.standard-bottom  {
   color: #4e5e6d;
   font-family: "Ubuntu","Helvetica Neue", Helvetica, Arial, sans-serif;
   min-height: 400px;
   margin-top: 80px;
 }
-.onesuite-bottom div {
+.standard-bottom div {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
   }
-.onesuite-bottom h3 {
+.standard-bottom h3 {
   font-size: 26px;
   color: #0087bf;
   font-weight: 300;
@@ -85,40 +82,40 @@ position: relative;
 }
 
 /* Style the accordian menus */
-.onesuite .et_lb_module_content {
+.standard .et_lb_module_content {
  border: 0px;
 }
-.onesuite .et_lb_first {
+.standard .et_lb_first {
   /* min-height: 400px; */
 }
-.onesuite .et_lb_module .et_lb_toggle {
+.standard .et_lb_module .et_lb_toggle {
   margin: 0 0 6px 2%; 
 }
-.onesuite .et_lb_module_content_inner {
+.standard .et_lb_module_content_inner {
   background-color: rgb( 255, 255, 255 );
   background-image: none;
 }
-.onesuite .et_lb_toggle_open .et_lb_toggle_title{
+.standard .et_lb_toggle_open .et_lb_toggle_title{
  color: #6f2075;
 }
-.onesuite .et_lb_toggle_title {
+.standard .et_lb_toggle_title {
   font-family: "Ubuntu","Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #0087bf;
   font-weight: normal;
   font-size: 20px;
   line-height: 24px;
 }
-.onesuite .et_lb_toggle_title  span.et_toggle {
+.standard .et_lb_toggle_title  span.et_toggle {
   width: 20px;
   height: 20px;
   top: 0px;
  }
- .onesuite .et_lb_toggle_content {
+ .standard .et_lb_toggle_content {
      font-family: "Ubuntu","Helvetica Neue", Helvetica, Arial, sans-serif;
 	 color: #000;
 	 line-height: 20px;
  }
-.onesuite .et_lb_toggle_close h3.et_lb_toggle_title span.et_toggle {
+.standard .et_lb_toggle_close h3.et_lb_toggle_title span.et_toggle {
   -webkit-transform: rotate(270deg);
   -moz-transform: rotate(270deg);
   -o-transform: rotate(270deg);

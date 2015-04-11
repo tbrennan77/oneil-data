@@ -164,6 +164,10 @@ a img {
 .site-container {
   width: 100%;
   background: #fff url(images/login-bg.png) no-repeat center 124px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: 100% auto;
 }
 
 .wrap {
@@ -443,7 +447,7 @@ h6,
 
             LAYOUT
 
-**********************************************************************************************/
+********************************************************************************************** /
 /*
 03 Header
 ---------------------------------------------------------------------------------------------------- */
@@ -453,6 +457,7 @@ h6,
   padding-bottom: 10px;
   padding-top: 14px;
   border-bottom: 4px solid #b6bbbf;
+  background-color: #fff;
 }
 
 .site-title {
@@ -505,6 +510,19 @@ h6,
   margin-top: 20px;
   /*margin-top: 5.6rem;
   width: 100%;*/
+}
+.site-header .client-login {
+  float: right;
+  margin-top: 32px;
+  margin-right: 30px;
+  color: #6f2075;
+}
+.site-header .client-login a {
+  color: #6f2075;
+  text-transform: uppercase;
+  font-size: 13px;
+  padding-left: 8px;
+  font-family: "Ubuntu","Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .site-header .search-form input {
   background: #e3e9ee url(images/search-icon.png) no-repeat 15px 50%;
@@ -960,19 +978,21 @@ border-top-right-radius: 5px;
 .after-post .textwidget .right {
   text-transform: uppercase;
   float: right;
-  background-image: -moz-linear-gradient( 90deg, rgb(17,63,72) 0%, rgb(29,81,91) 100%);
-  background-image: -webkit-linear-gradient( 90deg, rgb(17,63,72) 0%, rgb(29,81,91) 100%);
-  background-image: -ms-linear-gradient( 90deg, rgb(17,63,72) 0%, rgb(29,81,91) 100%);
-  opacity: 0.149;
+  background-image: url(images/request-quote-bg.png);
   width: 270px;
   height: 130px;
   z-index: 70;
 }
+
 .after-post .textwidget .right a {
   color: #fff;
   position: relative;
   top: 40%;
   left: 25%;
+}
+.after-post .textwidget .right a:after {
+  font-family: FontAwesome;
+  content: "\00a0 \00a0 \00a0 \00a0 \f0da";
 }
 /* Blockquotes */
 blockquote {
@@ -1457,7 +1477,7 @@ div.gform_wrapper form li {
  font-size: 16px;
  font-weight: 300;
  line-height: 20px;
- text-align: justify;
+ text-align: left;
 }
 #home-middle-01 section article .entry-content .more-link {display: none!important;}
 #home-middle-01 section article img {
@@ -1555,9 +1575,33 @@ div.gform_wrapper form li {
   
   
  /* Mega Menu */
-#mega-menu-sub-ul li {
-
-
+#mega-menu-wrap-primary #mega-menu-primary {
+   border-top: 3px solid #ccc!important;
+  }
+ul#mega-menu-primary > li:hover, 
+ul#mega-menu-primary li.mega-current-menu-item {
+  border-top: 3px solid purple!important;
+  margin-top: -3px!important;
+ }
+ul#mega-menu-primary > li:hover > a{ 
+ color: #4e5e6d!important; 
+} 
+.mega-sub-menu:before {
+	bottom: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(78, 94, 109, 0);
+	border-bottom-color: #4e5e6d;
+	border-width: 10px;
+	margin-left: -10px;
+}
+#mega-menu-sub-ul{
+ min-height: 150px!important;
 }
  #mega-menu-sub-ul li a:before {
     content: "• "!important;
@@ -1591,13 +1635,15 @@ ul#mega-menu-sub-ul-careers li span {
 ul#mega-menu-sub-ul-careers {
   border-right: 1px solid #b6bbbf;
 }
-
-
+#mega-menu-item-text-13 h4 {color: #fff!important;}
+#mega-menu-item-text-13  {}
+#mega-menu-item-text-13 .textwidget {border-left: 1px solid #b6bbbf; }
+#mega-menu-item-text-13 .textwidget img {margin-left: -10px;}
 .one-suite-links {
 background-color: rgb(255, 255, 255);
     border-radius: 4px;
     width: 100%;
-    min-height: 600px;
+    min-height: 700px;
     padding-left: 80px;
     padding-top: 60px;
     padding-bottom: 40px;
@@ -1617,4 +1663,19 @@ background-color: rgb(255, 255, 255);
   padding-top: 18px;
   padding-left: 30px;
   
+}
+
+.two-cols {  
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  }
+  
+#mega-menu-wrap-primary {
+  margin-top: -3px!important;
+  border-top: 3px solid #ccc;
+}
+.mega-current-menu-item, .mega-current_page_item {
+  border-top: 3px solid #662d91;
+  margin-top: -3px!important;
 }

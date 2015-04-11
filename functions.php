@@ -86,6 +86,7 @@ function gs_theme_setup() {
 			'secondary' => __( 'Secondary Navigation Menu', CHILD_DOMAIN ),
 			'industry'  => __( 'Industry Navigation Menu', CHILD_DOMAIN ),
 			'onesuite'  => __( 'OneSuite Navigation Menu', CHILD_DOMAIN ),
+			'about'     => __( 'About Navigation Menu', CHILD_DOMAIN ),
 			'footer'    => __( 'Footer Navigation Menu', CHILD_DOMAIN ),
 			'mobile'    => __( 'Mobile Navigation Menu', CHILD_DOMAIN ),
 		)
@@ -120,6 +121,7 @@ function gs_theme_setup() {
 	add_action('genesis_before_entry', 'reposition_entry_header' );	// Move the post title inside the content area
 	
 	add_filter('genesis_search_text', 'sp_search_text' );  // Custom Search box Text
+	add_filter('genesis_search_form', 'new_search_form', 10, 4);
 	add_filter('genesis_footer_output', 'custom_footer_copyright' ); // Remove copyright text
 	
 } // End of Set Up Function
@@ -187,6 +189,11 @@ function gs_register_sidebars() {
 			'name'			=> __( 'Request a Quote', CHILD_DOMAIN ),
 			'description'	=> __( 'This content will display after every page content.', CHILD_DOMAIN ),
 		),
+		array(
+			'id'			=> 'standard-one',
+			'name'			=> __( 'Standard: Featured News', CHILD_DOMAIN ),
+			'description'	=> __( 'This content will display the featured news item on ', CHILD_DOMAIN ),
+		),		
 	);
 	
 	foreach ( $sidebars as $sidebar )
@@ -282,7 +289,17 @@ function right_header_widget() {
 function sp_search_text( $text ) {
 	return esc_attr( 'Search' );
 }
+function new_search_form( $form, $search_text, $button_text, $label ) {
 
+		$form = '<form method="get" class="searchform search-form" action="' . home_url() . '" >' . $label . '
+		<input type="search" value="' . esc_attr( $search_text ) . '" name="q" class="s search-input"' . $onfocus . $onblur . ' />
+		<input type="submit" value="' . esc_attr( $button_text ) . '" />
+		</form>
+		<span class="client-login"><i class="fa fa-lock"></i><a href="#">Client Login</a></span>';
+
+		return $form;
+
+	}
 
 function sp_custom_footer() {
 
