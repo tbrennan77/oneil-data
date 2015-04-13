@@ -988,7 +988,7 @@ border-top-right-radius: 5px;
   color: #fff;
   position: relative;
   top: 40%;
-  left: 25%;
+  left: 20%;
 }
 .after-post .textwidget .right a:after {
   font-family: FontAwesome;
@@ -1499,8 +1499,9 @@ div.gform_wrapper form li {
   padding-right: 15px;
 }
 .site-inner-2 .featured-content {
- width: 65%; 
+ width: 32%; 
  float: left;
+ margin-right: 20px;
 }
 .site-inner-2 h4 {
   font-family: "Ubuntu","Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -1679,3 +1680,42 @@ background-color: rgb(255, 255, 255);
   border-top: 3px solid #662d91;
   margin-top: -3px!important;
 }
+
+.et_lb_toggle_close.toggle-top .et_lb_module_content_inner {
+	background-color: #0087bf!important;
+}
+
+.et_lb_toggle_close.toggle-top .et_lb_module_content_inner h3{
+	color: #fff;
+	text-shadow: none;
+}
+
+.et_lb_toggle_close.toggle-top .et_lb_toggle_content{
+	color: #fff;
+	text-shadow: none;
+}
+.et_lb_toggle_close.toggle-top h3.et_lb_toggle_title span.et_toggle {
+  content: '';
+  background: url(images/toggle_title-alt.png) no-repeat!important;
+}
+.margin-top {margin-top: 100px!important;}
+  
+#slider-button {
+  border-radius: 4px;
+  background-image: -moz-linear-gradient( 90deg, rgb(0,54,83) 0%, rgb(0,135,191) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(0,54,83) 0%, rgb(0,135,191) 100%);
+  background-image: -ms-linear-gradient( 90deg, rgb(0,54,83) 0%, rgb(0,135,191) 100%);
+  box-shadow: 3.214px 3.83px 0px 0px rgba(20, 19, 20, 0.21);
+  z-index: 115;
+}
+#slider-button a {
+  color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 14px;
+}
+#slider-button a:after {
+  font-family: FontAwesome;
+  content: "\00a0 \00a0 \00a0 \00a0 \f0da";
+}
+

@@ -295,7 +295,7 @@ function new_search_form( $form, $search_text, $button_text, $label ) {
 		<input type="search" value="' . esc_attr( $search_text ) . '" name="q" class="s search-input"' . $onfocus . $onblur . ' />
 		<input type="submit" value="' . esc_attr( $button_text ) . '" />
 		</form>
-		<span class="client-login"><i class="fa fa-lock"></i><a href="#">Client Login</a></span>';
+		<span class="client-login"><i class="fa fa-lock"></i><a href="https://oneview.oneildata.com/ONEsuite/Default.aspx" target="_blank">Client Login</a></span>';
 
 		return $form;
 
