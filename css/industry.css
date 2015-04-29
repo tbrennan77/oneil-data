@@ -44,7 +44,9 @@
   min-height: 400px;
   padding-top: 20px;
 }
-
+#menu-solutions {
+  background: #f0f0f1 url(../images/solutions-menu-bg.png) no-repeat left 0;
+ }
 /* Style the accordian menus */
 .industry .et_lb_module_content {
  border: 0px;

@@ -5,7 +5,7 @@
   background: #f0f0f1 url(../images/onesuite-menu-bg.png) no-repeat left 0;
  }
 .nav-secondary ul li:first-child {
-  margin-left: 20px;
+  margin-left: 100px;
 } 
 .site-inner {
   padding-top: 0px;
@@ -30,7 +30,7 @@
   width: 100%;
   
   }  
-.onesuite-intro-copy img {padding: 40px 0;}
+.onesuite-intro-copy img {padding: 20px;}
 .onesuite-intro-copy {
   font-family: "Ubuntu","Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #4e5e6d;
@@ -41,20 +41,37 @@
 .onesuite-intro-copy div {
   overflow: hidden;
   }
+.onesuite-intro-copy span {
+  width: 100%;
+  text-align: right;
+  float: right;
+  margin-right: 40px;
+  border-top: 1px dashed #4e5e6d;
+  margin-top: 20px;
+  padding-top: 20px;
+  }
 .et_lb_module {float: none!important;}
-.onesuite-intro-copy a.pdf {
+.onesuite-intro-copy a.pdf,
+.onesuite-intro-copy a.vid {
   font-family: "Ubuntu","Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #6f2075;
   text-transform: uppercase;
   font-size: .8em;
 }
-.onesuite-intro-copy a.pdf:before {
-  font-family: FontAwesome;
-  content: "\f1c1      ";
-}
+
 .onesuite-intro-copy a.pdf:after {
+  font-size: 22px;
   font-family: FontAwesome;
-  content: "                 \f0da";
+  content: "                 \f1c1";
+  position: relative;
+  top: 4px;  
+}
+.onesuite-intro-copy a.vid:after {
+  font-size: 22px;
+  font-family: FontAwesome;
+  content: " \f01d";
+  position: relative;
+  top: 4px;
 }
 .onesuite-intro-copy a i{
   padding-right: 10px;
@@ -86,8 +103,8 @@
   text-align: center;
   line-height: 44px;
   background-color: #fff;
-  width: 1100px;
-  margin-left: 100px!important;
+  width: 1052px;
+  margin: 0px auto!important;
 }
 .onesuite-callout p {
 margin-bottom: 0;

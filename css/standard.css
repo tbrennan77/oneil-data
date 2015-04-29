@@ -5,15 +5,40 @@
   background: #f0f0f1 url(../images/standard-menu-bg.png) no-repeat left 0;
  }
 .site-inner {
-  background: #f0f0f1 url(../images/standard-bg.png) repeat-x;
-  padding-top: 20px;
+  padding-top: 0px;
+  max-height: 100%;
+  background-color: #fff;
 }
+.site-inner .wrap { max-width: 100%; }
+.content-sidebar-wrap {background-color: #e3e9ee;}
+.standard .et_builder div.et_lb_resizable:nth-of-type(1) {
+  background: #e3e9ee url(../images/onesuite-bg-top.png) bottom repeat-x;
+  width: 100%;
+  margin-bottom: 0;
+  }
+.standard .et_builder div.et_lb_resizable:nth-of-type(2) {
+  background-color: white;
+  margin: 0;
+  padding: 60px 100px;
+  }
+.standard .et_builder div.et_lb_resizable:nth-of-type(3) {
+  background: #e3e9ee url(../images/onesuite-bg-bottom.png) top repeat-x;
+  padding: 50px 0;
+  width: 100%;
+  
+  } 
+.standard-intro-copy img {max-width: 95%; height: auto; margin-right: 30px;}
 .standard-intro-copy {
-  padding: 40px 20px 0 0;
   font-family: "Ubuntu","Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #4e5e6d;
-  min-height: 400px;
+  width: 1152px;
+  margin: 0 auto!important;
+  padding: 40px;
 }
+.standard-intro-copy div {
+  overflow: hidden;
+  }
+.et_lb_module {float: none!important;}
 .standard-intro-copy a.pdf {
   font-family: "Ubuntu","Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #6f2075;
@@ -35,13 +60,42 @@
   font-size: 36px;
   color: #6f2075;
   font-family: "Stainless","Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-bottom: 30px;
+}
+.standard-intro-copy  h2{
+  color: #0087bf;
+  font-size: 24px;
+  font-family: "Ubuntu","Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-bottom: 5px;
+  font-weight: 400;
 }
 .standard-intro-copy  h3 {
-  font-size: 26px;
+  font-size: 20px;
+  color: #0087bf;
+  font-family: "Ubuntu","Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-bottom: 5px;
+  font-weight: 300;
+}
+.standard-intro-copy  .byline {
   color: #0087bf;
   font-family: "Ubuntu","Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
+  font-size: 16px;
+  margin-bottom: 5px;
 }
+.standard-intro-copy p {margin-bottom: 5px;}
+.standard-intro-copy .more-link,
+.chpcs_more a {color: #6f2075; }
+.standard-intro-copy .more-link:after,
+.chpcs_more a:after {
+  font-family: FontAwesome;
+  content: "\00a0 \00a0 \00a0 \00a0 \f0da";
+}
+.chpcs_more a {
+ color: #6f2075!important;
+ text-transform: uppercase!important;
+ font-size: 14px!important;
+ }
 .standard-intro-logo {
   text-align: center;
   min-height: 400px;
@@ -121,4 +175,66 @@ position: relative;
   -o-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
   transform: rotate(270deg);
+}
+
+/* NEed to handle widget areas for things like blog/news/careers pages */
+ .standard .et_lb_widget_area {
+   font-family: "Ubuntu","Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #4e5e6d;
+  width: 1152px;
+  margin: 0 auto!important;
+  padding: 40px;
+ }
+ 
+ .standard .entry-title,
+ .standard .entry-title a {
+  color: #0087bf!important;
+  font-size: 24px!important;
+  font-family: "Ubuntu","Helvetica Neue", Helvetica, Arial, sans-serif!important;
+  font-weight: normal!important;
+}
+.chpcs_foo_content{
+  border-radius: 4px;
+  background-color: rgb( 241, 241, 241 );
+  box-shadow: 3.214px 3.83px 0px 0px rgba(20,19,20,0.21);
+  line-height: 22px;
+  padding: 20px;
+  text-align: left;
+}
+.chpcs_foo_content p {
+  padding-bottom: 0;
+  margin-bottom: 0
+  }
+
+.chpcs_foo_content .chpcs_img {
+  min-height: 200px;
+  }
+.chpcs_title {min-height: 55px;}
+.chpcs_image_carousel .chpcs_prev, .chpcs_image_carousel .chpcs_next {
+  color: #0087bf!important;
+}
+
+#featured-post-5 {
+  columns: 3;
+  -webkit-columns: 3;
+  -moz-columns: 3;
+}
+#featured-post-5 article {
+	min-height: 250px;
+	margin-right: 20px;
+}
+#featured-post-5 article h2.entry-title {
+	min-height: 70px;
+	margin-bottom: 5px;
+}
+#featured-post-5 article p.entry-meta {
+	min-height: 20px;
+	margin-bottom: 5px;
+	color: #0087bf;
+}
+#featured-post-5 article p.entry-meta a {color: #0087bf;}
+#featured-post-5 article .more-link {color: #6f2075;}
+#featured-post-5 article .more-link:after {
+  font-family: FontAwesome;
+  content: "\00a0 \00a0 \00a0 \00a0 \f0da";
 }
