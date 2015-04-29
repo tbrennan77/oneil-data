@@ -22,7 +22,12 @@ if ( ! defined( 'ABSPATH' ) ) exit( 'Cheatin&#8217; uh?' );
 add_filter('body_class', 'gs_add_landing_body_class' );
 add_filter('genesis_attr_entry-content', 'custom_add_css_attr' );
 add_action('wp_enqueue_scripts', 'custom_load_custom_style_sheet' );
-	
+
+add_action( 'genesis_entry_header', 'genesis_entry_header_markup_open', 5 );
+add_action( 'genesis_entry_header', 'genesis_do_post_title' );
+add_action( 'genesis_entry_header', 'genesis_post_info', 12 );
+add_action( 'genesis_entry_header', 'genesis_entry_header_markup_close', 15 );
+
 /**
  * Add page specific body class
  *
@@ -78,5 +83,30 @@ function custom_load_custom_style_sheet() {
 /** Force Layout */
 add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
 add_filter( 'genesis_site_layout', '__genesis_return_full_width_content' );
+
+
+/** Customize the post info function. */
+add_filter( 'genesis_post_info', 'wpse_108715_post_info_filter' );
+
+/** Customize the post meta function. */
+add_filter( 'genesis_post_meta', 'wpse_108715_post_meta_filter' );
+
+genesis();
+
+/**
+ * Change the default post information line.
+ */
+function wpse_108715_post_info_filter( $post_info ) {
+    $post_info = 'by [post_author_posts_link] on [post_date]';
+    return $post_info;
+}
+
+/**
+ * Change the default post meta line.
+ */
+function wpse_108715_post_meta_filter( $post_meta ) {
+    $post_meta = '[post_categories] [post_edit] [post_tags] [post_comments]';
+    return $post_meta;
+}
 
 genesis();

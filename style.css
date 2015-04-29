@@ -181,7 +181,7 @@ a img {
   *zoom: 1;
   /* padding-top: 20px;
   padding-top: 2rem; */
-  margin-bottom: 30px;
+  padding-bottom: 30px;
 }
 .site-inner-2 {
   background-color: #fff;
@@ -1766,3 +1766,27 @@ background-color: rgb(255, 255, 255);
 #home-middle-02 {
   padding-top: 20px;
   }
+
+   
+.single-post h1.entry-title {
+  font-size: 26px;
+  color: #0087bf;
+  font-family: "Ubuntu","Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+.single-post .entry-header .entry-meta {
+  color: #0087bf;
+  font-family: "Ubuntu","Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+.single-post .entry-time,
+.single-post  .entry-meta a  {
+  color: #0087bf;
+}
+.single-post .entry-content,
+.single-post .entry-header {
+  margin: 10px 40px;
+}
+.single-post .entry-content {
+  font-family: "Ubuntu","Helvetica Neue", Helvetica, Arial, sans-serif;
+}
