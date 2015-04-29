@@ -181,6 +181,7 @@ a img {
   *zoom: 1;
   /* padding-top: 20px;
   padding-top: 2rem; */
+  margin-bottom: 30px;
 }
 .site-inner-2 {
   background-color: #fff;
@@ -1736,7 +1737,12 @@ background-color: rgb(255, 255, 255);
 #mega-menu-wrap-primary #mega-menu-primary > li.mega-current-page-ancestor > a {
  color: #4e5e6d!important; 
 }
-
+#mega-menu-wrap-primary #mega-menu-primary a:hover {
+ padding: 2px 0;
+}
+#mega-menu-wrap-primary #mega-menu-primary a:hover {
+ color: #4bb9e7!important; 
+}
 .rolls {
   display: inline-block;
   float: left;
@@ -1744,6 +1750,7 @@ background-color: rgb(255, 255, 255);
   height: 121px;
   display: block;
   background-repeat: no-repeat;
+  border-right: 1px solid #7b868d;
 }
 
 .rolls2 {
@@ -1754,12 +1761,8 @@ background-color: rgb(255, 255, 255);
   display: block;
   background-repeat: no-repeat;
   margin-left: 10px;
+  background-position-x: right;
 }
-
-.hovernone {
-     background: url('images/normal.jpg');
-}
- 
-.hover1 {
-     background: url('images/rolls/1.png') !important;
-}
+#home-middle-02 {
+  padding-top: 20px;
+  }
