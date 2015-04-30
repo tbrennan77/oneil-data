@@ -47,6 +47,11 @@
 #menu-solutions {
   background: #f0f0f1 url(../images/solutions-menu-bg.png) no-repeat left 0;
  }
+.nav-secondary ul li:first-child {
+  margin-left: 120px;
+  padding-top: 3px;
+} 
+
 /* Style the accordian menus */
 .industry .et_lb_module_content {
  border: 0px;

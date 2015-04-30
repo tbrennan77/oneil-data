@@ -181,7 +181,6 @@ a img {
   *zoom: 1;
   /* padding-top: 20px;
   padding-top: 2rem; */
-  padding-bottom: 30px;
 }
 .site-inner-2 {
   background-color: #fff;
@@ -1779,6 +1778,19 @@ background-color: rgb(255, 255, 255);
   font-family: "Ubuntu","Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
 }
+
+.single-post .pagination,
+.single-post .pagination a {
+  color: #0087bf;
+  font-family: "Ubuntu","Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+.single-post  .entry-meta,
+.single-post  .entry-meta a  {
+  color: #0087bf;
+  font-family: "Ubuntu","Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;  
+}
 .single-post .entry-time,
 .single-post  .entry-meta a  {
   color: #0087bf;
@@ -1789,4 +1801,41 @@ background-color: rgb(255, 255, 255);
 }
 .single-post .entry-content {
   font-family: "Ubuntu","Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.category .entry-title a {
+  font-size: 26px;
+  color: #0087bf;
+  font-family: "Ubuntu","Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+.category .entry-header .entry-meta {
+  color: #0087bf;
+  font-family: "Ubuntu","Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+.category .entry-time,
+.category  .entry-meta a  {
+  color: #0087bf;
+}
+.category  .entry-meta {
+  color: #0087bf;
+  margin-left: 40px;
+}
+.category .entry-content,
+.category .entry-header {
+  margin: 10px 40px;
+}
+.category .entry-content {
+  font-family: "Ubuntu","Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.category .content-sidebar-wrap {
+  background-color: #fff;
+  width: 1152px;
+  margin: auto;
+}
+.category .entry-footer  .entry-meta {display: none;}
+.category .entry {
+	margin: 40px 0;
+	border-bottom: 1px solid #0087bf;
 }

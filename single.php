@@ -1,10 +1,9 @@
 <?php
 
 /**
- * Template Name: Blank Page Template
+ * Template Name: Single Post Template
  *
- * This file adds the ONEsuite template. This file assumes that nothing has been moved
- * from the Genesis default.
+ * This file adds the template for posts
  *
  * @category   Genesis_Sandbox
  * @package    Templates
@@ -91,7 +90,7 @@ add_filter( 'genesis_post_info', 'wpse_108715_post_info_filter' );
 /** Customize the post meta function. */
 add_filter( 'genesis_post_meta', 'wpse_108715_post_meta_filter' );
 
-genesis();
+//genesis();
 
 /**
  * Change the default post information line.
@@ -107,6 +106,12 @@ function wpse_108715_post_info_filter( $post_info ) {
 function wpse_108715_post_meta_filter( $post_meta ) {
     $post_meta = '[post_categories] [post_edit] [post_tags] [post_comments]';
     return $post_meta;
+}
+
+//add_action( 'genesis_after_header', 'genesis_do_subnav2' );
+
+function genesis_do_subnav2(){
+    wp_nav_menu( array( 'theme_location' => 'secondary-menu' ) );
 }
 
 genesis();

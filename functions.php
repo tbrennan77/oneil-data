@@ -361,12 +361,12 @@ function sample_footer_menu() {
 //* Move Post Title and Post Info from inside Entry Header to Entry Content on Posts page
 function reposition_entry_header() {
 
-	if (!is_home() ) {
+	if (!is_home() && !is_single() && !is_category() ) {
 
-		//remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_open', 5 );
-		//remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
-		//remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
-		//remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_close', 15 );
+		remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_open', 5 );
+		remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
+		remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
+		remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_close', 15 );
 
 		//add_action( 'genesis_entry_content', 'genesis_do_post_title', 9 );
 		//add_action( 'genesis_entry_content', 'genesis_post_info', 9 );

@@ -5,7 +5,8 @@
   background: #f0f0f1 url(../images/onesuite-menu-bg.png) no-repeat left 0;
  }
 .nav-secondary ul li:first-child {
-  margin-left: 100px;
+  margin-left: 170px;
+  padding-top: 3px;
 } 
 .site-inner {
   padding-top: 0px;
