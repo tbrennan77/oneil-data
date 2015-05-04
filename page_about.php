@@ -61,7 +61,7 @@ function set_background_image() {
 	if ($image <> '') {
 	?>
     <style type="text/css" id="custom-background-css-override">
-        .site-container {background: #fff url('<?php echo $image; ?>') no-repeat center 124px!important; }
+        .site-container {background: #435968 url('<?php echo $image; ?>') no-repeat center 124px!important; }
     </style>
 	<?php 
 	}

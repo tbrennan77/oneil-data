@@ -19,6 +19,7 @@
   background: #e3e9ee url(../images/onesuite-bg-top.png) bottom repeat-x;
   width: 100%;
   margin-bottom: 0;
+  min-height: 400px;
   }
 .onesuite .et_builder div.et_lb_resizable:nth-of-type(2) {
   background-color: white;
@@ -42,7 +43,8 @@
 .onesuite-intro-copy div {
   overflow: hidden;
   }
-.onesuite-intro-copy span {
+.onesuite-intro-copy span,
+.onesuite-intro-copy div.alignleft div {
   width: 100%;
   text-align: right;
   float: right;

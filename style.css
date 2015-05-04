@@ -1839,3 +1839,38 @@ background-color: rgb(255, 255, 255);
 	margin: 40px 0;
 	border-bottom: 1px solid #0087bf;
 }
+
+
+.ls-minimal {
+  padding: 0px !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+.ls-thumbnail-slide a {
+  background-color: #fff;
+  border-radius: 15px;
+  height: 20px !important;
+  width: 20px !important;
+  margin-right: 10px !important;
+}
+.ls-thumbnail-inner, .ls-thumbnail-slide-container {
+  background: transparent !important;
+ }
+.ls-thumbnail-slide {
+  top: 230px;
+}
+.ls-thumbnail {
+  width: 120px !important;
+}
+.ls-thumbnail-slide-container {
+  height: 260px;
+}
+.ls-thumbnail {
+  width: 120px;
+}
+.ls-minimal .ls-thumbnail-inner {
+  margin-left: 10px;
+}
+.ls-thumb-active a {
+    background-color: #662d91;
+}
