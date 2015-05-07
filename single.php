@@ -52,10 +52,11 @@ add_action('genesis_after_header', 'set_background_image');
 
 function set_background_image() {
     if ( is_singular( 'post' ) || ( is_singular( 'page' ) && has_post_thumbnail() ) ) {
-            
+		
         //$image = array( 'src' => has_post_thumbnail() ? genesis_get_image( array( 'format' => 'url' ) ) : '' );
-		$image = genesis_get_image( array( 'format' => 'url' ));
-
+		// $image = genesis_get_image( array( 'format' => 'url' ));
+		//$image = wp_get_attachment_url(156, 'full');
+		$image = wp_get_attachment_url( get_post_thumbnail_id(156, 'full') );	
     } else {
         // the fallback – our current active theme's default bg image
         $image = get_background_image();

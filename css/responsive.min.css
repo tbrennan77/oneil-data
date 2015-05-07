@@ -8,6 +8,7 @@
 
 .toggle-switch span {
 	color: #ddd;
+	display: none;
 }
 
 .toggle-switch{
@@ -22,19 +23,20 @@
 
 .toggle-switch:after{
 	content: "";
-	background: url(../lib/images/mobile_button_white.png) no-repeat ;
+	background: url(../lib/images/mobile-blue.png) no-repeat ;
 	position: absolute;
 	height: 30px;
 	width: 30px;
-	top: 10px;
-	right: 15px;
+	  top: 26px;
+	  right: 25px;
 }
 
 .primary .toggle-switch,
 .secondary .toggle-switch {
 	/*background: -webkit-linear-gradient(#4d4c4c 0%, #ffffff 100%);*/
 	/*background: -webkit-linear-gradient(rgba(22,22,22,1) 0%, rgba(78,78,78,1) 100%)*/
-	background-color:#3b3d42;
+	background:#fff url(http://www.boondockwalkerstaging.com/oneil/wp-content/themes/oneil-child-theme/images/logo-mobile.png) no-repeat 20px !important;
+	min-height: 80px;
 }	   
 
 
@@ -60,6 +62,66 @@
 		padding: 0 2%;	
 	}
 
+	/* Hide what we need to hide for mobile */
+	.header-widget-area,
+	#home-middle-01 section article img,
+	.site-header,
+	.social-icons,
+	.ls-thumbnail-wrapper
+	{display: none !important;}
+	
+	.site-container {
+		background: #fff url(http://www.boondockwalkerstaging.com/oneil/wp-content/themes/oneil-child-theme/images/login-bg.png) no-repeat;
+	}
+	#home-top {
+		margin: 50px 0;
+	}
+	#home-middle {
+		width: 100%;
+	}
+	#home-middle-01 {
+	   padding-left: 40px;
+	}
+	#home-middle-01 section article:first-child {margin-right: 0px;}
+	
+	#home-middle-01 section article {
+	  float: left;
+	  width: 90%;
+	  margin-bottom: 20px;
+	  padding: 10px 20px;
+	  /* width: 470px; */
+	  /* height: 180px; */
+	  z-index: 127;	
+	}
+	
+	.site-inner-2 .widget_recent_entries {
+	  width: 90%;
+	  float: left;
+	  margin: 10px 40px 0 40px;
+	}
+	.site-inner-2 .featured-content {
+	  width: 90%;
+	  float: left;
+	  margin: 50px 40px 0px 30px;
+	}  
+	#text-18 {display: none;}
+	
+	.one-suite-links {
+	  padding: 0 !important;
+	  margin: 0 !important;
+	  background-color: transparent;
+	}
+	.one-suite {
+	  margin: 10px;
+	  width: 99% !important;
+	}
+	
+	.site-footer ul.menu-footer a {color: #fff; border-top: 0px !important;}
+	
+	#menu-footer-menu li {padding: 5px 0; border-right: 0px solid #fff !important;}
+	
+	.site-footer {min-height: 450px;}
+	.footer-widgets-2.widget-area.first.one-third {margin-left: 30px;}
 	.archive-page,
 	.footer-widgets .widget-area,
 	.wrap,
@@ -82,6 +144,8 @@
 		margin-right: 0;
 	}
 
+	.footer-widgets .widget-area { padding: 20px; }
+	
 	.header-image .site-title, 
 	.header-image .title-area {
 		min-height: 50px;
@@ -109,8 +173,10 @@
 		text-align: center;
 	}
 
-	.genesis-nav-menu a {
-		padding: 1.25rem 1rem;
+	.genesis-nav-menu a, 
+.genesis-nav-menu.menu-mobile a	{
+		color: #0087bf;
+		font-family: "Ubuntu","Helvetica Neue", Helvetica, Arial, sans-serif;		
 	}
 
 	.genesis-nav-menu .sub-menu a {
@@ -118,8 +184,11 @@
 		border: none;
 	}
 
-	.genesis-nav-menu .sub-menu a:hover {
-		background-color: #7f838e;
+	.genesis-nav-menu .sub-menu a:hover ,
+		.genesis-nav-menu a:hover, 
+.genesis-nav-menu.menu-mobile a:hover{
+		background-color: #f5f5f5;
+		color: #662d91;
 	}
 
 	.site-title {
@@ -136,7 +205,7 @@
 	}
 
 	.site-footer .wrap {
-		padding: 1.5rem 0;
+		padding: 0 0;
 	}
 
 	.site-footer-widgets .widget-area {
@@ -151,6 +220,11 @@
 		padding: 0 0 .75rem;
 	}
 	
+	.site-footer ul.menu-footer {border-top: 0px !important;}
+	.site-footer ul.menu-footer a {
+	  border-right: 0px solid #fff;
+	}
+
 	.gototop {
 		float: none;
 	}
@@ -162,6 +236,7 @@
 	
 	.mobile-nav {
 		display: block;
+		border-bottom: 3px solid #ccc;
 	}
 	
 	
@@ -206,8 +281,18 @@
 	html {
 		font-size: 57.5%; 
 	}
-
-	.header-widget-area {display: none;}
+	
+	/* Hide what we need to hide for mobile */
+	.header-widget-area,
+	#home-middle-01 section article img,
+	.site-header
+	{display: none;}
+	
+	.genesis-nav-menu {
+		border-top: 3px solid #ccc;
+	}
+	
+	#menu-mobile {background-color: #fff;}
 	
 	.site-header .search-form {
 		width: 100%;

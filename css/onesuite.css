@@ -28,7 +28,7 @@
   }
 .onesuite .et_builder div.et_lb_resizable:nth-of-type(3) {
   background: #e3e9ee url(../images/onesuite-bg-bottom.png) top repeat-x;
-  padding: 50px 0;
+  /* padding: 50px 0; */
   width: 100%;
   
   }  
@@ -146,7 +146,7 @@ margin-bottom: 0;
  color: #6f2075;
 }
 .onesuite .et_lb_toggle_title {
-  font-family: "Ubuntu","Helvetica Neue", Helvetica, Arial, sans-serif;
+: 
   color: #0087bf;
   font-weight: normal;
   font-size: 20px;
@@ -168,4 +168,13 @@ margin-bottom: 0;
   -o-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
   transform: rotate(270deg);
+}
+
+div.contact-us-form {margin-top: 0; padding-top: 0;}
+div.contact-us-form  .et_lb_widget-title {display: none;}
+div.contact-us-form  ul.gfield_radio li
+{
+display: inline;
+list-style-type: none;
+padding-right: 20px;
 }

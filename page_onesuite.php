@@ -22,6 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) exit( 'Cheatin&#8217; uh?' );
 add_filter('body_class', 'gs_add_landing_body_class' );
 add_filter('genesis_attr_entry-content', 'custom_add_css_attr' );
 add_action('wp_enqueue_scripts', 'custom_load_custom_style_sheet' );
+add_action('wp_enqueue_scripts', 'custom_load_custom_javascripts' );
 	
 /**
  * Add page specific body class
@@ -73,6 +74,13 @@ function set_background_image() {
  */
 function custom_load_custom_style_sheet() {
 	wp_enqueue_style('onesuite-stylesheet', CHILD_URL . '/css/onesuite.css', array(), PARENT_THEME_VERSION );
+	wp_enqueue_style('magnificent-popup-stylesheet', CHILD_URL . '/css/magnific-popup.css', array(), PARENT_THEME_VERSION );
+}
+
+function custom_load_custom_javascripts() {
+	wp_enqueue_script('magnificent-popup-stylesheet', CHILD_URL . '/css/magnificPopup.js', array(), PARENT_THEME_VERSION );
+}
+
 }
 
 /** Force Layout */

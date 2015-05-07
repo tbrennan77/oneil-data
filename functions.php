@@ -194,7 +194,12 @@ function gs_register_sidebars() {
 			'id'			=> 'standard-one',
 			'name'			=> __( 'Standard: Featured News', CHILD_DOMAIN ),
 			'description'	=> __( 'This content will display the featured news item on ', CHILD_DOMAIN ),
-		),		
+		),	
+		array(
+			'id'			=> 'careers-one',
+			'name'			=> __( 'Careers Page Header', CHILD_DOMAIN ),
+			'description'	=> __( 'This content will display above the job postings ', CHILD_DOMAIN ),
+		),	
 	);
 	
 	foreach ( $sidebars as $sidebar )

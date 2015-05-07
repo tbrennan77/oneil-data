@@ -163,10 +163,10 @@ a img {
 .site-container {
   width: 100%;
   background: #fff url(images/login-bg.png) no-repeat center 124px;
-  -webkit-background-size: cover;
+ -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: 100% auto;
+  background-size: 100% auto; 
 }
 
 .wrap {
@@ -185,7 +185,9 @@ a img {
 .site-inner-2 {
   background-color: #fff;
 }
-
+.site-inner {
+  min-height: 790px;
+}
 /* Containers and Columns */
 .content-sidebar-sidebar .sidebar-secondary,
 .sidebar-content .content,
@@ -332,8 +334,9 @@ a img {
 
 /* Entry Content Structure */
 .content {
-  padding-bottom: 100px;
+  /* padding-bottom: 100px;
   padding-bottom: 10rem;
+  */
 }
 
 .entry,
@@ -959,8 +962,7 @@ border-top-right-radius: 5px;
 
 /* After Post */
 .after-post {
-  margin-bottom: 50px;
-  margin-bottom: 5rem;
+  padding-bottom: 50px;
   color: #fff;
   font-family: "Ubuntu", Arial, serif; 
   width: 65%; 
@@ -1448,7 +1450,7 @@ div.gform_wrapper form li {
 /* Home Widgets */
 #home-middle-01 {
   text-align: center;
-  padding-left: 70px;
+  padding-left: 81px;
 }
 #home-middle-01 section article {
   float: left;
@@ -1558,6 +1560,7 @@ div.gform_wrapper form li {
 .site-inner-3 {
  background-color: #e6ebef;
   font-family: "Ubuntu","Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding-top: 40px;
  }
  .site-inner-3  .wrap{
  text-align: center;
@@ -1763,7 +1766,7 @@ background-color: rgb(255, 255, 255);
   background-position-x: right;
 }
 #home-middle-02 {
-  padding-top: 20px;
+  padding-top: 60px;
   }
 
    
@@ -1859,18 +1862,43 @@ background-color: rgb(255, 255, 255);
 .ls-thumbnail-slide {
   top: 230px;
 }
-.ls-thumbnail {
-  width: 120px !important;
-}
 .ls-thumbnail-slide-container {
   height: 260px;
 }
 .ls-thumbnail {
   width: 120px;
+  text-align: center;
 }
 .ls-minimal .ls-thumbnail-inner {
-  margin-left: 10px;
+  margin: 0;
+  padding: 0;
 }
 .ls-thumb-active a {
     background-color: #662d91;
+}
+
+.gform_body,
+.gform_widget h3,
+.gform_footer
+{
+  margin: auto;
+  width: 70%;
+  }
+
+..gform_wrapper {
+
+}
+  
+.gfield_checkbox
+{
+   columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+ }
+ 
+.gfield_label span {
+	padding: 0 !important;
+	margin: 0 !important;
+	float: none !important;
+	border-top: 0px !important;
 }
