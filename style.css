@@ -1860,7 +1860,7 @@ background-color: rgb(255, 255, 255);
   box-shadow: none !important;
 }
 .ls-thumbnail-slide a {
-  background-color: #fff;
+  background-color: #ccc;
   border-radius: 15px;
   height: 20px !important;
   width: 20px !important;
@@ -1922,4 +1922,20 @@ background-color: rgb(255, 255, 255);
       /* border-top: 0; */
 	  padding: 0;
 	  background: transparent;
+}
+
+
+.ls-thumbnail-wrapper {
+  height: 40px !important;
+  position: relative!important;
+  top: 240px!important;
+}
+.ls-thumbnail-slide-container {
+  height: 50px !important;
+}
+.ls-thumbnail-slide {
+  height: 36px;
+  margin-left: 0px;
+  position: relative;
+  top: 0px;
 }
