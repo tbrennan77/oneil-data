@@ -4,9 +4,9 @@
 #menu-onesuite {
   background: #f0f0f1 url(../images/onesuite-menu-bg.png) no-repeat left 0;
  }
-.nav-secondary ul li:first-child {
-  margin-left: 170px;
-  padding-top: 3px;
+#menu-onesuite.menu-secondary li:first-child {
+  margin-left: 170px !important;
+  padding-top: 3px !important;
 } 
 .site-inner {
   padding-top: 0px;
@@ -83,6 +83,12 @@
   font-size: 36px;
   color: #6f2075;
   font-family: "Stainless","Helvetica Neue", Helvetica, Arial, sans-serif;
+}.onesuite-intro-copy  h2 {	
+  color: #0087bf;
+  font-size: 24px;
+  font-family: "Ubuntu","Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-bottom: 15px;
+  font-weight: 400;
 }
 .onesuite-intro-copy  h3 {
   font-size: 26px;
@@ -177,4 +183,14 @@ div.contact-us-form  ul.gfield_radio li
 display: inline;
 list-style-type: none;
 padding-right: 20px;
+}
+
+.column-left {
+  width: 45%;
+  float: left;
+}
+
+.column-right {
+  width: 45%;
+  float: right;
 }

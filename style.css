@@ -870,6 +870,9 @@ border-top-right-radius: 5px;
 .entry-tags {
   display: block;
 }
+.entry-tags {
+  display: none;
+  }
 
 .entry-time {
   color: #000d11;
@@ -965,7 +968,7 @@ border-top-right-radius: 5px;
   padding-bottom: 50px;
   color: #fff;
   font-family: "Ubuntu", Arial, serif; 
-  width: 65%; 
+  width: 59%; 
   margin: auto; 
 }
 .after-post .textwidget {
@@ -1479,6 +1482,8 @@ div.gform_wrapper form li {
 }
 #home-middle-01 section article header {
  text-align: left;
+ width: 200px;
+  margin-left: 150px;
 }
 #home-middle-01 section article .entry-content p {
  font-family: "Ubuntu","Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -1492,6 +1497,8 @@ div.gform_wrapper form li {
  height: 120px;
  width: 120px;
  margin: 20px 20px 0 10px;
+ position: relative;
+  top: -50px;
 }
 #home-middle-01 section article:first-child {
   margin-right: 40px;
@@ -1643,7 +1650,7 @@ ul#mega-menu-sub-ul-industry li a:before {
    background: #4e5e6d url(images/we-are-oneil.png) no-repeat!important;
 }
  .mega-mega-menu-documents .mega-sub-menu {
-   /* background: #4e5e6d url(images/mega-bg-2.png) no-repeat!important; */
+   background: #4e5e6d url(images/mega-menu-solutions-bg.png) center no-repeat !important;
 }
 ul#mega-menu-sub-ul-careers li span {
   display: block;
@@ -1799,9 +1806,12 @@ background-color: rgb(255, 255, 255);
   color: #0087bf;
 }
 .single-post .entry-content,
-.single-post .entry-header {
+.single-post .entry-header ,
+.single-post .entry-footer,
+.single-post .pagination {
   margin: 10px 40px;
 }
+
 .single-post .entry-content {
   font-family: "Ubuntu","Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -1901,4 +1911,15 @@ background-color: rgb(255, 255, 255);
 	margin: 0 !important;
 	float: none !important;
 	border-top: 0px !important;
+}
+
+.sticky {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100;
+      /* border-top: 0; */
+	  padding: 0;
+	  background: transparent;
 }

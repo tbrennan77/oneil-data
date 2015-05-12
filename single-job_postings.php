@@ -21,6 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) exit( 'Cheatin&#8217; uh?' );
 add_filter('body_class', 'gs_add_landing_body_class' );
 add_filter('genesis_attr_entry-content', 'custom_add_css_attr' );
 add_action('wp_enqueue_scripts', 'custom_load_custom_style_sheet' );
+add_action('wp_enqueue_scripts', 'custom_load_custom_javascripts' );
 	
 /**
  * Add page specific body class
@@ -46,10 +47,9 @@ function custom_add_css_attr( $attributes ) {
 add_action('genesis_after_header', 'set_background_image');
 
 function set_background_image() {
-    if ( is_singular( 'post' ) || ( is_singular( 'page' ) && has_post_thumbnail() ) ) {
+    if ( is_singular( 'job_postings' ) || ( is_singular( 'page' ) && has_post_thumbnail() ) ) {
             
-        //$image = array( 'src' => has_post_thumbnail() ? genesis_get_image( array( 'format' => 'url' ) ) : '' );
-		$image = genesis_get_image( array( 'format' => 'url' ));
+        $image = wp_get_attachment_url( get_post_thumbnail_id(1609, 'full') );
 
     } else {
         // the fallback – our current active theme's default bg image
@@ -73,7 +73,9 @@ function set_background_image() {
 function custom_load_custom_style_sheet() {
 	wp_enqueue_style('onesuite-stylesheet', CHILD_URL . '/css/standard.css', array(), PARENT_THEME_VERSION );
 }
-
+function custom_load_custom_javascripts() {
+	wp_enqueue_script('careers-js', CHILD_URL . '/js/careers.js', array(), PARENT_THEME_VERSION );
+}
 /** Force Layout */
 add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
 add_filter( 'genesis_site_layout', '__genesis_return_full_width_content' );
@@ -95,6 +97,7 @@ function wnd_do_custom_loop() {
 				
 				$custom;
 				$post_id = 0;
+				$job = "";
 				
 				$job_postings = new WP_Query(array(
 					'post_type' => 'job_postings'
@@ -104,9 +107,14 @@ function wnd_do_custom_loop() {
 					
 					while($job_postings->have_posts()): $job_postings->the_post();
 					global $post;  // Add this line and you're golden
+					$job = get_post_meta( $post->ID, 'job_location', true);
 					
 					?>
-					<li <?php echo $selected?>><a href="<?php the_permalink()?>"><?php the_title()?></a></li>
+					<li <?php echo $selected?>><a href="<?php the_permalink()?>"><?php the_title()?></a>
+						<?php if(!empty($job)) {?>
+							<br /><span><?php echo $job; ?></span></li>
+						<?php } ?>
+					</li>
 					<?php
 					endwhile;
 					wp_reset_postdata();

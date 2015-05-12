@@ -19,3 +19,7 @@ jQuery(document).ready(function ($) {
         }, 500)
     })
 })
+
+jQuery(document).ready(function($) {
+  $('a.vid').magnificPopup();
+});

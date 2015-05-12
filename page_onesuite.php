@@ -78,9 +78,8 @@ function custom_load_custom_style_sheet() {
 }
 
 function custom_load_custom_javascripts() {
-	wp_enqueue_script('magnificent-popup-stylesheet', CHILD_URL . '/css/magnificPopup.js', array(), PARENT_THEME_VERSION );
-}
-
+	wp_enqueue_script('magnificent-js', CHILD_URL . '/js/magnificPopup.js', array(), PARENT_THEME_VERSION );
+	wp_enqueue_script('onesuite-js', CHILD_URL . '/js/onesuite.js', array(), PARENT_THEME_VERSION );
 }
 
 /** Force Layout */

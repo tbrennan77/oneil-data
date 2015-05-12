@@ -21,6 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) exit( 'Cheatin&#8217; uh?' );
 add_filter('body_class', 'gs_add_landing_body_class' );
 add_filter('genesis_attr_entry-content', 'custom_add_css_attr' );
 add_action('wp_enqueue_scripts', 'custom_load_custom_style_sheet' );
+add_action('wp_enqueue_scripts', 'custom_load_custom_javascripts' );
 	
 /**
  * Add page specific body class
@@ -73,6 +74,9 @@ function set_background_image() {
 function custom_load_custom_style_sheet() {
 	wp_enqueue_style('onesuite-stylesheet', CHILD_URL . '/css/standard.css', array(), PARENT_THEME_VERSION );
 }
+function custom_load_custom_javascripts() {
+	wp_enqueue_script('careers-js', CHILD_URL . '/js/careers.js', array(), PARENT_THEME_VERSION );
+}
 
 /** Force Layout */
 add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
@@ -105,6 +109,7 @@ function wnd_do_custom_loop() {
 				$i = 0;
 				$custom;
 				$post_id = 0;
+				$job = "";
 				
 				$job_postings = new WP_Query(array(
 					'post_type' => 'job_postings'
@@ -116,13 +121,19 @@ function wnd_do_custom_loop() {
 					global $post;  // Add this line and you're golden
 					//echo $post->ID;
 					
+					$job = get_post_meta( $post->ID, 'job_location', true);
+					
 					if($i == 0)
 					{
 						$post_id = $post->ID;
 					}
 					$i++;
 					?>
-					<li <?php echo $selected?>><a href="<?php the_permalink()?>"><?php the_title()?></a></li>
+					<li <?php echo $selected?>><a href="<?php the_permalink()?>"><?php the_title()?></a>
+						<?php if(!empty($job)) {?>
+							<br /><span><?php echo $job; ?></span></li>
+						<?php } ?>
+					</li>
 					<?php
 					endwhile;
 					wp_reset_postdata();

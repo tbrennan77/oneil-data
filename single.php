@@ -21,6 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) exit( 'Cheatin&#8217; uh?' );
 add_filter('body_class', 'gs_add_landing_body_class' );
 add_filter('genesis_attr_entry-content', 'custom_add_css_attr' );
 add_action('wp_enqueue_scripts', 'custom_load_custom_style_sheet' );
+add_action('wp_enqueue_scripts', 'custom_load_custom_javascripts' );
 
 add_action( 'genesis_entry_header', 'genesis_entry_header_markup_open', 5 );
 add_action( 'genesis_entry_header', 'genesis_do_post_title' );
@@ -80,6 +81,9 @@ function custom_load_custom_style_sheet() {
 	wp_enqueue_style('onesuite-stylesheet', CHILD_URL . '/css/blank.css', array(), PARENT_THEME_VERSION );
 }
 
+function custom_load_custom_javascripts() {
+	wp_enqueue_script('news-js', CHILD_URL . '/js/news.js', array(), PARENT_THEME_VERSION );
+}
 /** Force Layout */
 add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
 add_filter( 'genesis_site_layout', '__genesis_return_full_width_content' );

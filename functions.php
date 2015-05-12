@@ -244,14 +244,14 @@ function gs_do_after_entry() {
 function my_login_logo() { ?>
 
 	    <style type="text/css">
-		body {background: url('http://localhost:8080/oneildata/wp-content/themes/oneil-child-theme/images/login-bg.png') no-repeat top center fixed;}
+		body {background: url('http://www.boondockwalkerstaging.com/oneil/wp-content/themes/oneil-child-theme/images/login-bg.png') no-repeat top center fixed;}
 		body.login div#login {width: 500px;}
         body.login div#login h1 a {
-            background-image: url('http://www.oneildata.com/wp-content/themes/oneil/css/assets/logo.png');
+            background-image: url('http://www.boondockwalkerstaging.com/oneil/wp-content/uploads/2015/04/ONeil_logo.png');
             padding-bottom: 30px;
 			background-size: 201px;
 			width: 201px;
-			height: 40px;
+			height: 100px;
         }
 		#login {padding: 80px 0 0;}
 		.login form {background: transparent; -webkit-box-shadow: none; box-shadow: none;}
@@ -742,3 +742,9 @@ function careers_formatter($content) {
 }
 add_filter('the_content', 'careers_formatter', 99);
 
+
+add_action( 'genesis_entry_content', 'featured_post_image', 8 );
+function featured_post_image() {
+  if ( ! is_singular( 'post' ) )  return;
+	the_post_thumbnail('post-image');
+}
