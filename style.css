@@ -171,7 +171,7 @@ a img {
 
 .wrap {
   margin: 0 auto;
-  max-width: 1152px;
+  max-width: 1352px;
 }
 
 .site-inner, 
@@ -186,7 +186,7 @@ a img {
   background-color: #fff;
 }
 .site-inner {
-  min-height: 790px;
+ /* min-height: 790px; */
 }
 /* Containers and Columns */
 .content-sidebar-sidebar .sidebar-secondary,
@@ -466,7 +466,9 @@ h6,
   border-bottom: 4px solid #b6bbbf;
   background-color: #fff;
 }
-
+.site-header .wrap {
+	padding: 0 100px 0 120px;
+}
 .site-title {
   margin: 40px 0 8px;
   margin: 4rem 0 0.8rem;
@@ -875,7 +877,7 @@ border-top-right-radius: 5px;
   }
 
 .entry-time {
-  color: #000d11;
+  /* color: #000d11; */
 }
 
 /* Comments */
@@ -961,8 +963,17 @@ border-top-right-radius: 5px;
 .entry-content p {
   margin-bottom: 26px;
   margin-bottom: 2.6rem;
+  -webkit-column-break-inside: avoid;
+          page-break-inside: avoid;
+               break-inside: avoid;
 }
 
+.dontbreak {
+-webkit-column-break-inside: avoid;
+          page-break-inside: avoid;
+               break-inside: avoid;
+			   }
+			   
 /* After Post */
 .after-post {
   padding-bottom: 50px;
@@ -977,13 +988,15 @@ border-top-right-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
   min-height: 130px;  
+  max-width: 700px;
+  margin: auto;
 }
 .after-post .textwidget .left {
   font-size: 16px;
   line-height: 20px;
-  padding: 20px 0 10px 20px;
+  padding: 25px 0 10px 40px;
   float: left;
-  width: 60%;
+  width: 400px;
   min-height: 130px;
 }
 .after-post .textwidget .right {
@@ -1284,8 +1297,9 @@ input[type="submit"],
 button:hover,
 input:hover[type="button"],
 input:hover[type="submit"],
-.btn:hover {
+a.btn:hover {
   background-color: #2b4a5d;
+  color: #0087bf;
 }
 
 /*
@@ -1652,6 +1666,9 @@ ul#mega-menu-sub-ul-industry li a:before {
  .mega-mega-menu-documents .mega-sub-menu {
    background: #4e5e6d url(images/mega-menu-solutions-bg.png) center no-repeat !important;
 }
+.mega-mega-menu-documents .mega-sub-menu > li:first-child {
+	border-right: 1px solid #7b868d !important;
+}
 ul#mega-menu-sub-ul-careers li span {
   display: block;
   font-size: .9em;
@@ -1667,13 +1684,14 @@ ul#mega-menu-sub-ul-careers {
 .one-suite-links {
 background-color: rgb(255, 255, 255);
     border-radius: 4px;
-    width: 100%;
+    max-width: 1152px;
     min-height: 700px;
     padding-left: 80px;
     padding-top: 60px;
     padding-bottom: 40px;
     margin-bottom: 80px;
 	margin-top: 20px;
+	margin: auto;
   }
   
 .one-suite {
@@ -1759,7 +1777,7 @@ background-color: rgb(255, 255, 255);
   height: 121px;
   display: block;
   background-repeat: no-repeat;
-  border-right: 1px solid #7b868d;
+  
 }
 
 .rolls2 {
@@ -1898,7 +1916,12 @@ background-color: rgb(255, 255, 255);
 ..gform_wrapper {
 
 }
-  
+ .gform_wrapper .gform_footer {
+  padding: 1em 0 .625em;
+  margin: auto !important;
+  clear: both;
+  width: 70%;
+}
 .gfield_checkbox
 {
    columns: 2;
@@ -1939,3 +1962,10 @@ background-color: rgb(255, 255, 255);
   position: relative;
   top: 0px;
 }
+
+#test-modal {
+  background: white;
+  width: 50%;
+  margin: 50px auto;
+  padding: 50px;
+  }

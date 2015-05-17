@@ -5,7 +5,7 @@
   background: #f0f0f1 url(../images/onesuite-menu-bg.png) no-repeat left 0;
  }
 #menu-onesuite.menu-secondary li:first-child {
-  margin-left: 170px !important;
+  margin-left: 170px ;
   padding-top: 3px !important;
 } 
 .site-inner {
@@ -180,9 +180,10 @@ div.contact-us-form {margin-top: 0; padding-top: 0;}
 div.contact-us-form  .et_lb_widget-title {display: none;}
 div.contact-us-form  ul.gfield_radio li
 {
-display: inline;
-list-style-type: none;
-padding-right: 20px;
+	display: inline-block;
+	list-style-type: none;
+	padding-right: 20px;
+	width: 33%;
 }
 
 .column-left {

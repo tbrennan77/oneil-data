@@ -63,6 +63,17 @@ function set_background_image() {
 	?>
     <style type="text/css" id="custom-background-css-override">
         .site-container {background: #435968 url('<?php echo $image; ?>') no-repeat center 124px!important; }
+		
+		@media only screen and (max-width: 1024px) {
+			.site-container {
+				background: #435968 url('<?php echo $image; ?>') no-repeat center 0px!important; 
+				width: 100%;
+				-webkit-background-size: cover;
+				-moz-background-size: cover;
+				-o-background-size: cover;
+				background-size: 100% auto;
+			}
+		}
     </style>
 	<?php 
 	}

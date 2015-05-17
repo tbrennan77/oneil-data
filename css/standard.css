@@ -19,19 +19,21 @@
 .standard .et_builder div.et_lb_resizable:nth-of-type(2) {
   background-color: white;
   margin: 0;
-  padding: 60px 100px;
+  /* padding: 60px 100px; */
   }
 .standard .et_builder div.et_lb_resizable:nth-of-type(3) {
   background: #e3e9ee url(../images/onesuite-bg-bottom.png) top repeat-x;
   padding: 50px 0;
   width: 100%;
-  
+  padding-bottom: 0px;
+  margin-bottom: 0px;
   } 
+
 .standard-intro-copy img {max-width: 95%; height: auto; margin-right: 30px;}
 .standard-intro-copy {
   font-family: "Ubuntu","Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #4e5e6d;
-  width: 1152px;
+  width: 1352px;
   margin: 0 auto!important;
   padding: 40px;
 }
@@ -109,7 +111,6 @@
   line-height: 44px;
   padding: 0 120px;
   background-color: #fff;
-  margin-top: 80px;
   height: 350px;
 }
 .standard-callout p {
@@ -140,7 +141,7 @@ position: relative;
  border: 0px;
 }
 .standard .et_lb_first {
-  /* min-height: 400px; */
+  min-height: 410px;
 }
 .standard .et_lb_module .et_lb_toggle {
   margin: 0 0 6px 2%; 

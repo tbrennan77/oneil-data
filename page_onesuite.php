@@ -19,10 +19,10 @@
 if ( ! defined( 'ABSPATH' ) ) exit( 'Cheatin&#8217; uh?' );
 
 // Custom Filters and Actions
-add_filter('body_class', 'gs_add_landing_body_class' );
-add_filter('genesis_attr_entry-content', 'custom_add_css_attr' );
-add_action('wp_enqueue_scripts', 'custom_load_custom_style_sheet' );
-add_action('wp_enqueue_scripts', 'custom_load_custom_javascripts' );
+add_filter('body_class', 'gs_add_landing_body_class');
+add_filter('genesis_attr_entry-content', 'custom_add_css_attr');
+add_action('wp_enqueue_scripts', 'custom_load_custom_style_sheet');
+add_action('wp_enqueue_scripts', 'custom_load_custom_javascripts');
 	
 /**
  * Add page specific body class
@@ -63,6 +63,17 @@ function set_background_image() {
 	?>
     <style type="text/css" id="custom-background-css-override">
         .site-container {background: #435968 url('<?php echo $image; ?>') no-repeat center 124px!important; }
+		
+		@media only screen and (max-width: 1024px) {
+			.site-container {
+				background: #435968 url('<?php echo $image; ?>') no-repeat center 0px!important; 
+				width: 100%;
+				-webkit-background-size: cover;
+				-moz-background-size: cover;
+				-o-background-size: cover;
+				background-size: 100% auto;
+			}
+		}
     </style>
 	<?php 
 	}

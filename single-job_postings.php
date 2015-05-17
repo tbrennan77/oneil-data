@@ -61,6 +61,17 @@ function set_background_image() {
 	?>
     <style type="text/css" id="custom-background-css-override">
         .site-container {background: #435968 url('<?php echo $image; ?>') no-repeat center 124px!important; }
+		
+		@media only screen and (max-width: 1024px) {
+			.site-container {
+				background: #435968 url('<?php echo $image; ?>') no-repeat center 0px!important; 
+				width: 100%;
+				-webkit-background-size: cover;
+				-moz-background-size: cover;
+				-o-background-size: cover;
+				background-size: 100% auto;
+			}
+		}
     </style>
 	<?php 
 	}
@@ -72,8 +83,10 @@ function set_background_image() {
  */
 function custom_load_custom_style_sheet() {
 	wp_enqueue_style('onesuite-stylesheet', CHILD_URL . '/css/standard.css', array(), PARENT_THEME_VERSION );
+	wp_enqueue_style('magnificent-popup-stylesheet', CHILD_URL . '/css/magnific-popup.css', array(), PARENT_THEME_VERSION );
 }
 function custom_load_custom_javascripts() {
+	wp_enqueue_script('magnificent-js', CHILD_URL . '/js/magnificPopup.js', array(), PARENT_THEME_VERSION );
 	wp_enqueue_script('careers-js', CHILD_URL . '/js/careers.js', array(), PARENT_THEME_VERSION );
 }
 /** Force Layout */
@@ -202,20 +215,22 @@ function wnd_do_custom_loop() {
 				<li>Fill out your information. Make sure you attach the Application Form.</li>
 			</ol>
 			
-			<p class="button">
-				<span><a href="<?php bloginfo('url');?>" class="apply-btn">Apply Now!</a></span>
+			<p class="button"><br />
+				<?php if(isset($custom['job_pdf'][0]) && !empty($custom['job_pdf'][0])) {?>
 				<span><a target="_blank" href="<?php echo $app_doc?>">Download Application Form</a></span>
+				<br />
+				<?php } ?>
+				<span><a class="popup-modal btn" href="#test-modal">Apply Now!</a></span>
 			</p>
 		</article>
 		<div class="gray-notch"></div>
 	</div>
 </section>
 </div>
-<div style="display:none;">
-	<div class="modal" id="apply-form">
-		<?php $_GET['position_name'] = get_the_title();?>
-		<?php gravity_form(4, true, true, false, null, true); ?>
-	</div>
+<div id="test-modal" class="white-popup-block mfp-hide">
+	<h1>Apply Now</h1>
+	<?php gravity_form(5, true, true, false, null, true); ?>
+	<p><a class="popup-modal-dismiss" href="#">Close</a></p>
 </div>
 <?php 
 }

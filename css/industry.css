@@ -1,16 +1,51 @@
 .nav-primary { 
   margin-bottom: 240px;
  }
+ .after-post {
+  margin: auto;
+  padding-top: 50px;
+  background: #fff url(../images/industry-bg.png) repeat-x center top;
+  width: 100%;
+  min-height: 300px;
+}
+.after-post .home-widget {
+  width: 60%;
+  margin: auto;
+}
 .site-inner {
-  background: #fff url(../images/industry-bg.png) repeat-x center 450px;
+  background: #fff; /* url(../images/industry-bg.png) repeat-x center 450px; */
   padding-top: 20px;
 }
+.site-inner .wrap {
+	max-width: 100%;
+}
+.industry .et_builder div.et_lb_resizable:nth-of-type(1) {
+  background: #fff;
+  width: 100%;
+  margin-bottom: 0;
+  }
+.industry .et_builder div.et_lb_resizable:nth-of-type(2) {
+  background: #e3e9ee url(../images/industry-bg.png) top repeat-x;
+  margin: 0;
+  padding: 60px 100px;
+  }
+.industry .et_builder div.et_lb_resizable:nth-of-type(3) {
+  background: #e3e9ee url(../images/onesuite-bg-bottom.png) top repeat-x;
+  padding: 50px 0;
+  width: 100%;
+  
+  } 
+.industry-intro-copy img {max-width: 95%; height: auto; margin-right: 30px;}
 .industry-intro-copy {
-  padding: 40px 20px 0 0;
   font-family: "Ubuntu","Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #4e5e6d;
-  min-height: 400px;
+  width: 1352px;
+  margin: 0 auto!important;
+  padding: 40px 40px 0 40px;
 }
+.industry-intro-copy div {
+  overflow: hidden;
+  }
 .industry-intro-copy a.pdf {
   font-family: "Ubuntu","Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #6f2075;
@@ -47,6 +82,7 @@
 #menu-solutions {
   background: #f0f0f1 url(../images/solutions-menu-bg.png) no-repeat left 0;
  }
+ .et_lb_module {float: none!important;}
 .nav-secondary ul li:first-child {
   margin-left: 120px;
   padding-top: 3px;
@@ -92,4 +128,14 @@
   -o-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
   transform: rotate(270deg);
+}
+
+.leftside {
+	width: 48%;
+	float: left !important;
+}
+
+.rightside {
+	width: 45%;
+	float: right !important;
 }

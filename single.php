@@ -101,7 +101,7 @@ add_filter( 'genesis_post_meta', 'wpse_108715_post_meta_filter' );
  * Change the default post information line.
  */
 function wpse_108715_post_info_filter( $post_info ) {
-    $post_info = 'by [post_author_posts_link] on [post_date]';
+    $post_info = 'On [post_date]'; //'by [post_author_posts_link] on [post_date]';
     return $post_info;
 }
 

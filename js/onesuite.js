@@ -1,10 +1,3 @@
-
-
-jQuery(function( $ ){
-	$( "ul#menu-careers .job-opps" ).addClass( "current-menu-item" );
-	$( "ul#mega-menu-primary > li:nth-of-type(3)" ).addClass( "mega-current-menu-item" );
-});
-
 jQuery(document).ready(function($) {
   	$('.popup-modal').magnificPopup({
 		type: 'inline',
@@ -16,4 +9,6 @@ jQuery(document).ready(function($) {
 		e.preventDefault();
 		$.magnificPopup.close();
 	});
+	
+	$('a.vid').magnificPopup({type: 'iframe'});
 });

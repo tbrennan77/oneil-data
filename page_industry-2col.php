@@ -1,9 +1,9 @@
 <?php
 
 /**
- * Template Name: Standard Page Template
+ * Template Name: Industry 2 Col Page Template
  *
- * This file adds the standard (default) interior page template. This file assumes that nothing has been moved
+ * This file adds the Industry template. This file assumes that nothing has been moved
  * from the Genesis default.
  *
  * @category   Genesis_Sandbox
@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) exit( 'Cheatin&#8217; uh?' );
 add_filter('body_class', 'gs_add_landing_body_class' );
 add_filter('genesis_attr_entry-content', 'custom_add_css_attr' );
 add_action('wp_enqueue_scripts', 'custom_load_custom_style_sheet' );
-add_action('wp_enqueue_scripts', 'custom_load_custom_javascripts' );
+
 
 /**
  * Add page specific body class
@@ -31,14 +31,14 @@ add_action('wp_enqueue_scripts', 'custom_load_custom_javascripts' );
  * @return $classes array Modified Body Classes
  */
 function gs_add_landing_body_class( $classes ) {
-   $classes[] = 'about';
+   $classes[] = 'landing';
    return $classes;
 }
 
 function custom_add_css_attr( $attributes ) {
  
  // add original plus extra CSS classes
- $attributes['class'] .= ' standard toggled-on';
+ $attributes['class'] .= ' industry toggled-on';
  
  // return the attributes
  return $attributes;
@@ -63,7 +63,19 @@ function set_background_image() {
 	?>
     <style type="text/css" id="custom-background-css-override">
         .site-container {background: #435968 url('<?php echo $image; ?>') no-repeat center 124px!important; }
-		
+		.site-inner {background: #fff url(http://www.boondockwalkerstaging.com/oneil/wp-content/themes/oneil-child-theme/images/industry-bg.png) repeat-x center 420px;}
+		.after-post {background: transparent url();}
+		.site-inner .wrap {max-width: 1152px;}
+		.et_lb_module.et_lb_column.et_lb_1_2 {
+			float: right !important;
+			width: 45% !important;
+			margin-top: 40px;
+		}
+		.et_lb_module.et_lb_column.et_lb_1_2.et_lb_first {
+			float: left !important;
+			width: 45% !important;
+			margin-top: 40px;
+		}
 		@media only screen and (max-width: 1024px) {
 			.site-container {
 				background: #435968 url('<?php echo $image; ?>') no-repeat center 0px!important; 
@@ -84,43 +96,12 @@ function set_background_image() {
  *
  */
 function custom_load_custom_style_sheet() {
-	wp_enqueue_style('onesuite-stylesheet', CHILD_URL . '/css/standard.css', array(), PARENT_THEME_VERSION );
+	wp_enqueue_style('industry-stylesheet', CHILD_URL . '/css/industry.css', array(), PARENT_THEME_VERSION );
 }
 
-function custom_load_custom_javascripts() {
-	if(is_page(156)) {
-		wp_enqueue_script('news-js', CHILD_URL . '/js/news.js', array(), PARENT_THEME_VERSION );
-	}
-}
-
-function custom_layout() {
-
-echo '<div id="standard-widgets" class="standard-widgets gs-standard-widgets-3">';
-  echo '<div class="wrap">';
-
-		genesis_widget_area('standard-one', array(
-			'before' => '<div class="standard-widgets-1 widget-area first">',
-			'after' => '</div>',
-		) );
-  
-		genesis_widget_area('standard-two', array(
-			'before' => '<div class="standard-widgets-2 widget-area first">',
-			'after' => '</div>',
-		) );
-
-		genesis_widget_area('standard-three', array(
-			'before' => '<div class="standard-widgets-3 widget-area first">',
-			'after' => '</div>',
-		) );
-
-  echo '</div>';
-echo '</div>';
-
-}
 
 /** Force Layout */
-add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
-add_filter( 'genesis_site_layout', '__genesis_return_full_width_content' );
+add_filter('genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
+add_filter('genesis_site_layout', '__genesis_return_full_width_content' );
 
 genesis();
-?>

@@ -89,4 +89,33 @@ function gs_home_widgets2() {
         );
 }
 
+
+add_action('genesis_before_header', 'set_homepage_styles');
+
+function set_homepage_styles() {
+	?>
+    <style type="text/css" id="custom-background-css-override">
+        .site-inner {
+			min-height: 902px !important;
+		}
+		#home-top {
+			height: 560px;
+		}
+		#home-middle {
+			text-align: center;
+			width: 100%;
+		}
+		#home-middle-01 {
+			display: inline-block;
+			padding-left: 10px;
+		}
+		#featured-page-advanced-2 {
+			float: left;
+		}
+		#featured-page-advanced-3 {
+			float: right;
+		}
+    </style>
+	<?php 
+}
 genesis();
