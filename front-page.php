@@ -95,11 +95,13 @@ add_action('genesis_before_header', 'set_homepage_styles');
 function set_homepage_styles() {
 	?>
     <style type="text/css" id="custom-background-css-override">
+		.site-container {height: 930px;}
         .site-inner {
-			min-height: 902px !important;
+			min-height: 760px !important; 
 		}
 		#home-top {
-			height: 560px;
+		  height: 530px;
+		  padding-top: 30px;
 		}
 		#home-middle {
 			text-align: center;
@@ -109,11 +111,38 @@ function set_homepage_styles() {
 			display: inline-block;
 			padding-left: 10px;
 		}
-		#featured-page-advanced-2 {
-			float: left;
+
+		
+		
+		@media only screen and (max-width: 480px) {
+				.site-container {
+					height: 500px;
+				}
+				.site-inner {
+					min-height: 500px !important; 
+				}
 		}
-		#featured-page-advanced-3 {
-			float: right;
+		
+		@media only screen and (max-width: 768px) {
+
+			.site-container {
+			  height: 600px;
+			  padding-top: 40px;
+			}
+			.site-inner {
+					min-height: 600px !important; 
+			}
+			#featured-page-advanced-2 {
+			  float: none !important;
+			  margin: 0 10%;
+			  width: 100%;
+			}
+			#featured-page-advanced-3 {
+				float: inherit !important;
+							  margin: 0 10%;
+				  width: 100%;
+			}
+		
 		}
     </style>
 	<?php 

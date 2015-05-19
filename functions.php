@@ -117,6 +117,7 @@ function gs_theme_setup() {
 	remove_action('genesis_footer', 'genesis_do_footer' );	// Remove Default Footer
 	
 	add_action('login_enqueue_scripts', 'my_login_logo' );  // Custom Login Page
+	add_action('wp_enqueue_scripts', 'custom_load_custom_javascripts');
 	add_action('genesis_after_entry', 'gs_do_after_entry'); // Add Widget Area After Post
 	add_action('genesis_footer', 'sp_custom_footer' );		// Custom Footer Design
 	add_action('genesis_before_entry', 'reposition_entry_header' );	// Move the post title inside the content area
@@ -126,6 +127,14 @@ function gs_theme_setup() {
 	add_filter('genesis_footer_output', 'custom_footer_copyright' ); // Remove copyright text
 	
 } // End of Set Up Function
+
+function custom_load_custom_javascripts() {
+	
+	if(is_page( 'news' )) {
+		//wp_enqueue_script('news-slider-js', plugins_url() . '/carousel-horizontal-posts-content-slider/assets/js/caroufredsel/jquery.carouFredSel-6.2.1-packed.js', array(), PARENT_THEME_VERSION );
+	
+	}
+}
 
 // Register Sidebars
 function gs_register_sidebars() {
@@ -244,10 +253,10 @@ function gs_do_after_entry() {
 function my_login_logo() { ?>
 
 	    <style type="text/css">
-		body {background: url('http://www.boondockwalkerstaging.com/oneil/wp-content/themes/oneil-child-theme/images/login-bg.png') no-repeat top center fixed;}
+		body {background: url('http://www.oneildigitalsolutions.com/wp-content/themes/oneil-child-theme/images/login-bg.png') no-repeat top center fixed;}
 		body.login div#login {width: 500px;}
         body.login div#login h1 a {
-            background-image: url('http://www.boondockwalkerstaging.com/oneil/wp-content/uploads/2015/04/ONeil_logo.png');
+            background-image: url('http://www.oneildigitalsolutions.com/wp-content/uploads/2015/04/ONeil_logo.png');
             padding-bottom: 30px;
 			background-size: 201px;
 			width: 201px;

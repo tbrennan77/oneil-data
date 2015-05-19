@@ -162,11 +162,11 @@ a img {
 /* Wraps */
 .site-container {
   width: 100%;
-  background: #fff url(images/login-bg.png) no-repeat center 124px;
+  background: #fff url(images/login-bg.png) no-repeat center 24px;
  -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: 100% auto; 
+  background-size: cover;
 }
 
 .wrap {
@@ -467,7 +467,7 @@ h6,
   background-color: #fff;
 }
 .site-header .wrap {
-	padding: 0 100px 0 120px;
+	padding: 0 100px 0 140px;
 }
 .site-title {
   margin: 40px 0 8px;
@@ -980,7 +980,8 @@ border-top-right-radius: 5px;
   color: #fff;
   font-family: "Ubuntu", Arial, serif; 
   width: 59%; 
-  margin: auto; 
+  margin: auto;
+  padding-top: 50px;  
 }
 .after-post .textwidget {
   background: #6f2075;
@@ -1236,9 +1237,23 @@ div.social-icons {
 	float: right;
 	margin-top: -65px;
 }
+div.social-icons span {
+  padding: 15px 0px;
+  margin: 0;
+  color: #fff;
+  font-family: "Ubuntu", Arial, serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  position: relative;
+  top: 10px;  
+  }
 ul.footer-social-menu {
- overflow: auto;
- width: 200px;
+  overflow: auto;
+  width: 170px;
+  display: inline;
+  float: right;
+  text-align: left;
+  margin-left: 10px;
 }
  
 ul.footer-social-menu li {
@@ -1682,16 +1697,13 @@ ul#mega-menu-sub-ul-careers {
 #mega-menu-item-text-13 .textwidget {border-left: 1px solid #b6bbbf; }
 #mega-menu-item-text-13 .textwidget img {margin-left: -10px;}
 .one-suite-links {
-background-color: rgb(255, 255, 255);
+	background-color: rgb(255, 255, 255);
     border-radius: 4px;
     max-width: 1152px;
     min-height: 700px;
-    padding-left: 80px;
-    padding-top: 60px;
-    padding-bottom: 40px;
-    margin-bottom: 80px;
-	margin-top: 20px;
+    padding: 80px 10px 0 70px;
 	margin: auto;
+	margin-bottom: 80px;
   }
   
 .one-suite {
@@ -1701,7 +1713,7 @@ background-color: rgb(255, 255, 255);
   width: 470px;
   height: 120px;
   float: left;
-  margin: 10px;
+  margin: 0 0 15px 0;
   text-align: left;
   padding-top: 18px;
   padding-left: 30px;
@@ -1899,7 +1911,12 @@ background-color: rgb(255, 255, 255);
 }
 .ls-minimal .ls-thumbnail-inner {
   margin: 0;
+  margin-left: -13px !important;
   padding: 0;
+}
+.ls-minimal .ls-thumbnail {
+  /* top: -60px;
+  left: -10px; */
 }
 .ls-thumb-active a {
     background-color: #662d91;
@@ -1949,15 +1966,13 @@ background-color: rgb(255, 255, 255);
 
 
 .ls-thumbnail-wrapper {
-  height: 40px !important;
-  position: relative!important;
-  top: 240px!important;
+	margin-top: 40px !important;
 }
 .ls-thumbnail-slide-container {
-  height: 50px !important;
+  height: 20px !important;
 }
 .ls-thumbnail-slide {
-  height: 36px;
+  height: 20px;
   margin-left: 0px;
   position: relative;
   top: 0px;

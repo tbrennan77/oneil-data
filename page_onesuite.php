@@ -23,7 +23,8 @@ add_filter('body_class', 'gs_add_landing_body_class');
 add_filter('genesis_attr_entry-content', 'custom_add_css_attr');
 add_action('wp_enqueue_scripts', 'custom_load_custom_style_sheet');
 add_action('wp_enqueue_scripts', 'custom_load_custom_javascripts');
-	
+
+
 /**
  * Add page specific body class
  *
@@ -80,17 +81,30 @@ function set_background_image() {
 }
 
 /**
- * Add other page specific css
  *
+ * Add other page specific css
  */
 function custom_load_custom_style_sheet() {
 	wp_enqueue_style('onesuite-stylesheet', CHILD_URL . '/css/onesuite.css', array(), PARENT_THEME_VERSION );
 	wp_enqueue_style('magnificent-popup-stylesheet', CHILD_URL . '/css/magnific-popup.css', array(), PARENT_THEME_VERSION );
+	
+	// Gravity Forms style sheet only load on contact page
+	if(is_page('contact-us')){
+		wp_enqueue_style( 'gforms_reset_css-css', plugins_url() . '/gravityforms/css/formreset.min.css', array(), PARENT_THEME_VERSION );
+		wp_enqueue_style( 'gforms_formsmain_css-css', plugins_url() . '/gravityforms/css/formsmain.min.css', array(), PARENT_THEME_VERSION );
+		wp_enqueue_style( 'gforms_ready_class_css-css', plugins_url() . '/gravityforms/css/readyclass.min.css', array(), PARENT_THEME_VERSION );
+		wp_enqueue_style( 'gforms_browsers_css-css', plugins_url() . '/gravityforms/css/browsers.min.css', array(), PARENT_THEME_VERSION );
+	}
+
 }
 
 function custom_load_custom_javascripts() {
 	wp_enqueue_script('magnificent-js', CHILD_URL . '/js/magnificPopup.js', array(), PARENT_THEME_VERSION );
 	wp_enqueue_script('onesuite-js', CHILD_URL . '/js/onesuite.js', array(), PARENT_THEME_VERSION );
+	
+	if(is_page( 'contact-us' )) {
+		gravity_form_enqueue_scripts(1, true );
+	}
 }
 
 /** Force Layout */

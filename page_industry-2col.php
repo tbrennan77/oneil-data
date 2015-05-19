@@ -63,7 +63,7 @@ function set_background_image() {
 	?>
     <style type="text/css" id="custom-background-css-override">
         .site-container {background: #435968 url('<?php echo $image; ?>') no-repeat center 124px!important; }
-		.site-inner {background: #fff url(http://www.boondockwalkerstaging.com/oneil/wp-content/themes/oneil-child-theme/images/industry-bg.png) repeat-x center 420px;}
+		.site-inner {background: #fff url(http://www.oneildigitalsolutions.com/wp-content/themes/oneil-child-theme/images/industry-bg.png) repeat-x center 420px;}
 		.after-post {background: transparent url();}
 		.site-inner .wrap {max-width: 1152px;}
 		.et_lb_module.et_lb_column.et_lb_1_2 {
