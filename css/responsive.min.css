@@ -228,8 +228,8 @@
 	  /* padding: 0 !important; */
 	  margin: auto 0;
 	  background-color: transparent;
-	  /* display: inline-table; */
-	  width: 90%;
+	  /* display: inline-table; 
+	  width: 90%; */
 	  margin: 0 10%;
 	}
 	.one-suite {
@@ -250,12 +250,50 @@
 	}
 	.site-footer ul.menu-footer a {color: #fff; border-top: 0px !important;}
 	
-	#menu-footer-menu li {padding: 5px 0; border-right: 0px solid #fff !important;}
+	#menu-footer-menu li {
+		padding: 5px 0; 
+		border-right: 0px solid #fff !important;
+	}
 	
 	.site-footer {min-height: 650px;}
+	
 	#menu-footer-menu li {display: block;}
 	.site-footer ul.menu-footer a {
 	  padding: 0 24px 0 20px;
+	}
+	
+	/* Toggle stuff */
+	.page-template-page_industry-2col .site-inner {
+	  background: #eff0f1 url(http://www.boondockwalkerstaging.com/oneil/wp-content/themes/oneil-child-theme/images/industry-bg.png) repeat-x center 420px;
+	}
+	.industry-intro-copy .margin-top {
+		margin-top: 0px !important;
+	}
+	.industry .et_lb_module .et_lb_toggle {
+	  margin: 0;
+	}	
+	.industry .et_lb_module.et_lb_toggle {
+	    margin: 0 !important;
+  padding: 5px !important;
+  width: 100% !important;
+	}
+	.industry .rightside {
+	  float: inherit !important;
+	}
+	.industry .et_lb_module {
+		margin: 0 !important;
+	}
+	.industry .et_lb_module.et_lb_column.et_lb_1_2.et_lb_first {
+	  float: left !important;
+	  width: 49% !important;
+	  margin-top: 40px;
+	  clear: none !important;
+	}
+	.et_lb_module.et_lb_column.et_lb_1_2 {
+	  float: right !important;
+	  width: 48% !important;
+	  margin-top: 40px;
+	  clear: none !important;
 	}
 	.footer-widgets-2.widget-area.first.one-third {}
 	.archive-page,
@@ -501,6 +539,17 @@ img.alignleft { float: left; }
 	.gform_wrapper .top_label input.medium, .gform_wrapper .top_label select.medium {
 	  width: 97.5% !important;
 	}
+		
+	/* Toggle stuff */
+	.industry .et_lb_module.et_lb_column.et_lb_1_2.et_lb_first {
+	  float: none !important;
+	  width: 100% !important;
+	}
+	.industry .et_lb_module.et_lb_column.et_lb_1_2 {
+	  float: none !important;
+	  width: 100% !important;
+	  margin-top: 0px !important;
+	}
 }
 
 /* iPhones (portrait and landscape) ----------- */
@@ -518,7 +567,7 @@ img.alignleft { float: left; }
 	{display: none;}
 	
 	#home-middle {
-		display: none;
+		/* display: none; */
 	}
 
 	.genesis-nav-menu {

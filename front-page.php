@@ -100,20 +100,32 @@ function set_homepage_styles() {
 			min-height: 760px !important; 
 		}
 		#home-top {
-		  height: 530px;
 		  padding-top: 30px;
+		  min-height: 530px;
 		}
 		#home-middle {
 			text-align: center;
 			width: 100%;
 		}
 		#home-middle-01 {
-			display: inline-block;
-			padding-left: 10px;
+			  display: inline-block;
+		  padding-left: 0 !important;
+		  width: 80%;
 		}
 
-		
-		
+		#featured-page-advanced-2 {
+			  float:left;
+			  width: 47%;
+			  margin-right: 15px;
+			}
+		#featured-page-advanced-3 {
+				float: right;
+				width: 47%;
+				margin-left: 15px;
+			}
+		.ls-thumbnail-wrapper {
+			display: block;
+		}
 		@media only screen and (max-width: 480px) {
 				.site-container {
 					height: 500px;
@@ -132,6 +144,10 @@ function set_homepage_styles() {
 			.site-inner {
 					min-height: 600px !important; 
 			}
+
+		
+		}
+		@media only screen and (max-width: 1024px) {
 			#featured-page-advanced-2 {
 			  float: none !important;
 			  margin: 0 10%;
@@ -142,7 +158,18 @@ function set_homepage_styles() {
 							  margin: 0 10%;
 				  width: 100%;
 			}
+		}
 		
+		@media only screen and (max-width: 1176px) {
+			#home-middle-01 {
+			 width: 90%;
+			}
+			#home-top {
+			  min-height: 400px;	
+			}
+			.ls-thumbnail-wrapper {
+				display: none;
+			}
 		}
     </style>
 	<?php 
